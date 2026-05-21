@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>WisdomAsia | Transcultural Intelligence, Research & Strategy across China & Asia</title>
+    <meta name="description" content="WisdomAsia is an independent research and consulting company specialising in Transcultural Intelligence across China and Asia. Established in 2004, bridging commercial research and academic behavioural science." />
+    <meta name="keywords" content="WisdomAsia, Transcultural Intelligence, China Market Research, Asia Consulting, Behavioural Science, Dr. Barry Tse, Consumer Insights, WIN Network China" />
+    <meta name="author" content="WisdomAsia" />
+    
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WisdomAsia | Transcultural Intelligence" />
+    <meta property="og:description" content="Independent research and consulting specialising in Transcultural Intelligence across China and Asia. Bridging behavioural insights and transcultural interpretation since 2004." />
+    <meta property="og:image" content="./assets/logo.png" />
+    <meta property="og:url" content="https://wisdomasia-mr.com" />
+    
+    <!-- LinkedIn Cardinal Links -->
+    <link rel="canonical" href="https://wisdomasia-mr.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Main Style Bundle (Vite processes this stylesheet compiling Tailwind CSS v4 directives) -->
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="bg-warm-bg text-dark-text antialiased relative min-h-screen overflow-x-hidden">
+    
+    <!-- A. RESPONSIVE MOBILE NAVIGATION HEADER (Visible on tablets and mobile screens only) -->
+    <header class="lg:hidden sticky top-0 z-50 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-light-gray px-6 py-4 flex justify-between items-center h-16 shadow-xs" id="mobile-header">
+      <a href="#home" class="flex items-center gap-2 transition-transform duration-300 hover:opacity-90" aria-label="WisdomAsia Home">
+        <img src="./assets/logo.png" alt="WisdomAsia logo" class="h-10 w-auto object-contain" />
+      </a>
+      
+      <!-- Hamburger Toggle Button -->
+      <button 
+        id="mobile-menu-toggle" 
+        class="text-dark-text p-2 hover:text-accent focus:outline-none transition-colors duration-250 cursor-pointer" 
+        aria-label="Toggle navigation menu"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY PANEL -->
+    <div 
+      id="mobile-menu-overlay" 
+      class="hidden lg:hidden fixed inset-0 top-16 z-40 bg-[#FAF9F5] flex-col justify-between p-8 animation-fade-in transition-all duration-300"
+    >
+      <nav class="flex flex-col gap-8 pt-8">
+        <a href="#home" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Home</a>
+        <a href="#about" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">About</a>
+        <a href="#expertise" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Expertise</a>
+        <a href="#perspective" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Our Perspective</a>
+        <a href="#contact" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Contact</a>
+      </nav>
+      
+      <div class="border-t border-light-gray pt-6 flex flex-col gap-3">
+        <span class="font-mono text-xs text-muted-text uppercase tracking-widest">Global Affiliation</span>
+        <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-dark-text hover:text-accent flex items-center gap-1">
+          WIN Network Member
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+        <div class="flex gap-4 mt-2">
+          <a href="https://www.linkedin.com/company/wisdomasia/" target="_blank" rel="noopener noreferrer" class="text-[#0077B5] hover:opacity-85 transition-opacity" aria-label="WisdomAsia Company LinkedIn">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- B. DUAL-COLUMN MASTER LAYOUT -->
+    <div class="max-w-7xl mx-auto flex min-h-screen relative">
+      
+      <!-- 1. LEFT PINNED DESKTOP COMPACT NAV RAIL -->
+      <aside class="hidden lg:flex w-80 h-screen sticky top-0 flex-col justify-between py-16 px-10 border-r border-[#EBEAE6] bg-[#FAF9F5] z-30">
+        
+        <!-- Top branding & Compact graphical logo placement -->
+        <div class="flex flex-col items-center select-none">
+          <a href="#home" class="group focus:outline-none flex flex-col items-center text-center" aria-label="WisdomAsia homepage">
+            <img src="./assets/logo.png" alt="WisdomAsia logo" class="w-48 h-auto object-contain" />
+          </a>
+        </div>
+        
+        <!-- Middle section indicator menu -->
+        <nav class="flex flex-col gap-6 pl-4">
+          <a href="#home" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono active hover:text-accent">01. Home</a>
+          <a href="#about" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">02. About</a>
+          <a href="#expertise" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">03. Expertise</a>
+          <a href="#perspective" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">04. Perspective</a>
+          <a href="#contact" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">05. Contact</a>
+        </nav>
+        
+        <!-- Bottom metadata details -->
+        <div class="flex flex-col gap-4 text-xs font-mono text-muted-text border-t border-light-gray pt-6">
+          <div class="flex flex-col gap-1.5 pl-1">
+            <span class="text-[10px] text-muted-text uppercase tracking-widest font-semibold">Established 2004</span>
+            <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="text-[10px] hover:text-accent flex items-center gap-1 transition-colors duration-250">
+              WIN Market Research Member
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+          <div class="flex gap-3 pl-1 mt-1">
+            <a href="https://www.linkedin.com/company/wisdomasia/" target="_blank" rel="noopener noreferrer" class="text-muted-text hover:text-accent transition-colors duration-250 flex items-center gap-1.5" aria-label="WisdomAsia Company LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4 text-[#0077B5]"></i>
+              <span class="text-[10px]">Company LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 2. MAIN SCROLLABLE CONTENT COLUMN -->
+      <main class="flex-1 w-full px-6 md:px-12 lg:px-16 xl:px-24 pb-20 relative">
+        
+        <!-- CULTURAL DECORATIVE BACKGROUND (Bespoke watermark elements integrated direct inside content container to preserve rendering overlays) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden select-none z-0" aria-hidden="true">
+          <!-- Full height background repeating subtle lattice pattern, faded beautifully -->
+          <svg class="absolute inset-0 w-full h-full opacity-[0.12] md:opacity-[0.18]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="traditionalLattice" width="80" height="80" patternUnits="userSpaceOnUse">
+                <!-- Classic Asian wood-carving lattice geometry -->
+                <rect width="80" height="80" fill="none" />
+                <!-- Border grid -->
+                <path d="M0 0 h80 v80 h-80 z" stroke="#B81D24" stroke-width="0.75" fill="none" />
+                <!-- Cross bars -->
+                <path d="M40 0 v80 M0 40 h80" stroke="#B81D24" stroke-width="0.5" fill="none" />
+                <!-- Traditional step-back geometric interlocking fretwork -->
+                <path d="M20 0 v20 h-20 M60 0 v20 h20 M20 80 v-20 h-20 M60 80 v-20 h20" stroke="#B81D24" stroke-width="0.5" fill="none" />
+                <path d="M40 20 h-10 v20 h10 v20" stroke="#B81D24" stroke-width="0.5" fill="none" />
+                <path d="M40 20 h10 v20 h-10 v20" stroke="#B81D24" stroke-width="0.5" fill="none" />
+                <circle cx="40" cy="40" r="4" stroke="#B81D24" stroke-width="0.5" fill="none" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#traditionalLattice)" />
+          </svg>
+          
+          <!-- Elegant Auspicious Cloud Medallion 1 (Floating beautifully in the top-right of main view) -->
+          <svg class="absolute top-[8%] right-[-50px] md:right-4 w-[280px] h-[280px] text-[#B81D24] opacity-[0.15] hover:opacity-[0.25] transition-opacity duration-500" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="95" stroke-dasharray="4 4" />
+            <circle cx="100" cy="100" r="90" />
+            <circle cx="100" cy="100" r="80" stroke-dasharray="1 5" />
+            <!-- Auspicious Clouds inside the medallion -->
+            <path d="M70,100 C60,90 50,90 45,95 C40,100 45,110 55,115 C65,120 75,110 75,100 C75,90 65,80 55,80 C40,80 30,95 30,110 C30,125 45,135 60,135 C80,135 90,115 90,100 Z" />
+            <path d="M130,100 C140,90 150,90 155,95 C160,100 155,110 145,115 C135,120 125,110 125,100 C125,90 135,80 145,80 C160,80 170,95 170,110 C170,125 155,135 140,135 C120,135 110,115 110,100 Z" />
+            <!-- Central symmetric infinity loop knot -->
+            <path d="M92,94 Q100,86 108,94 Q116,102 108,110 Q100,114 92,106 Q84,98 92,106 Z" />
+            <path d="M108,94 Q100,86 92,94 Q84,102 92,110 Q100,114 108,106 Q116,98 108,94 Z" />
+          </svg>
+
+          <!-- Elegant Auspicious Cloud Medallion 2 (Middle Left, behind perspective section) -->
+          <svg class="absolute top-[42%] left-[-80px] w-[260px] h-[260px] text-[#B81D24] opacity-[0.14] hover:opacity-[0.22] transition-opacity duration-500" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="92" />
+            <path d="M60,100 c0,-20 20,-30 40,-30 c20,0 40,10 40,30 c0,20 -20,30 -40,30 c-20,0 -40,-10 -40,-30 z" stroke-dasharray="2 3" />
+            <path d="M75,95 c-5,-5 -15,-5 -20,0 c-5,5 -5,15 0,20 c5,5 15,5 20,0" />
+            <path d="M125,95 c5,-5 15,-5 20,0 c5,5 5,15 0,20 c-5,5 -15,5 -20,0" />
+            <path d="M90,115c5,10 15,10 20,0" />
+            <circle cx="100" cy="100" r="5" />
+          </svg>
+
+          <!-- Minimal classical calligraphic brush seal watermark (Top Left) -->
+          <div class="absolute top-[3%] left-[2%] opacity-[0.16] select-none pointer-events-none hidden xl:block">
+            <svg class="w-16 h-16 text-[#B81D24]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="5" y="5" width="90" height="90" rx="4" stroke-width="2" />
+              <path d="M25,25 h50 M25,50 h50 M25,75 h50 M50,25 v50" stroke-width="1.5" />
+              <text x="50" y="58" font-family="'serif', 'PingFang SC', 'Microsoft YaHei'" font-weight="900" font-size="28" fill="currentColor" opacity="0.9" text-anchor="middle">精</text>
+            </svg>
+          </div>
+
+          <!-- Elegant Auspicious Cloud Medallion 3 (Bottom Right near Contact) -->
+          <svg class="absolute bottom-[5%] right-[-60px] w-[320px] h-[320px] text-[#B81D24] opacity-[0.15] hover:opacity-[0.25] transition-opacity duration-500" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="95" stroke-dasharray="3 3" />
+            <circle cx="100" cy="100" r="88" />
+            <!-- Symmetrical Cloud design -->
+            <path d="M70,105 C60,95 50,95 45,100 C40,105 45,115 55,120 C65,125 75,115 75,105 C75,95 65,85 55,85 C40,85 30,100 30,115 C30,130 45,140 60,140 C80,140 90,120 90,105 Z" />
+            <path d="M130,105 C140,95 150,95 155,100 C160,105 155,115 145,120 C135,125 125,115 125,105 C125,95 135,85 145,85 C160,85 170,100 170,115 C170,130 155,140 140,140 C120,140 110,120 110,105 Z" />
+            <!-- Waves stylized scrollwork at center -->
+            <path d="M85,105 Q100,120 115,105" />
+            <path d="M90,95 Q100,105 110,95" />
+          </svg>
+        </div>
+        
+        <!-- SECTION 1: HOME (Hero Scene) -->
+        <section id="home" class="min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center py-16 border-b border-light-gray animate-fade-in relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10">
+            <!-- Left Narrative Column (7/12 grid) -->
+            <div class="lg:col-span-7 flex flex-col justify-center">
+              <!-- Company Logo on Hero landing -->
+              <div class="mb-14 select-none flex items-center justify-start row">
+                <img src="./assets/logo.png" alt="WisdomAsia logo" class="w-64 h-auto object-contain" />
+              </div>
+              
+              <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-dark-text font-normal leading-tight tracking-tight mb-8">
+                Transcultural Intelligence
+              </h1>
+              
+              <p class="font-serif text-lg sm:text-xl text-muted-text font-light leading-relaxed mb-12">
+                Understanding people, culture, markets, and behaviour across China and Asia through rigorous research and culturally grounded interpretation.
+              </p>
+              
+              <div class="flex">
+                <a 
+                  href="#contact" 
+                  class="inline-flex items-center gap-3 px-8 py-4 bg-accent text-white font-mono text-xs tracking-[0.25em] uppercase hover:bg-accent-dark hover:gap-4 transition-all duration-300 shadow-sm rounded-none cursor-pointer"
+                >
+                  Initiate Contact
+                  <i data-lucide="arrow-right" class="w-4 h-4 transition-transform text-white"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Right custom visual image (5/12 grid) -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative p-2 bg-warm-card border border-light-gray shadow-sm">
+                <!-- Subtle decorative gold corner bars on graphic representing traditional framing -->
+                <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-accent-gold-dark"></div>
+                <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-accent-gold-dark"></div>
+                
+                <img 
+                  src="/src/assets/images/hero_workspace_1779377819153.png" 
+                  alt="Scholarly Research workspace desk layout" 
+                  class="w-full max-w-sm h-auto object-cover border border-[#C0BEBA]/30 hover:opacity-95 transition-opacity" 
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT -->
+        <section id="about" class="py-24 sm:py-32 border-b border-light-gray">
+          <header class="mb-12">
+            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">02 / About</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Origins & Intellectual Foundation</h2>
+          </header>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-8">
+            <!-- Left Narrative Column (7/12 grid) -->
+            <div class="lg:col-span-7 font-sans text-muted-text text-sm sm:text-base leading-relaxed flex flex-col gap-6">
+              <p>
+                WisdomAsia was founded by research and consulting professionals who believe that research must continue to evolve alongside markets, societies, and technology. Yet while tools and methodologies change, meaningful understanding of human behaviour still depends on strong foundations in psychology, culture, and the behavioural sciences.
+              </p>
+              <p>
+                Established in 2004, WisdomAsia brings together commercial research experience, transcultural interpretation, and academically informed behavioural insight across China and Asia.
+              </p>
+              
+              <p>
+                WisdomAsia approaches markets not merely as economic systems, but as human systems shaped by culture, cognition, values, behaviour, and social change.
+              </p>
+              
+              <p>
+                WisdomAsia is the China member of the <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="editorial-link font-medium text-dark-text hover:text-accent inline-flex items-center gap-1 bg-warm-card/10 border-b border-[#C0BEBA]/40 px-1 py-0.5">Worldwide Independent Network of Market Research and Opinion Poll (WIN)<i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-accent"></i></a>, a global association of independent market research and polling firms spanning multiple countries and regions.
+              </p>
+            </div>
+            
+            <!-- Right Scholar / Founder Text Box & Psychology Art column (5/12 grid) -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+              <!-- Dr Barry Tse Biography Box - Smaller Font & Polished Text Box -->
+              <div class="bg-warm-card border border-light-gray p-6 relative rounded-sm shadow-2xs">
+                <!-- Golden Accent line -->
+                <div class="h-0.5 w-12 bg-accent-gold mb-3"></div>
+                
+                <span class="font-mono text-[9px] tracking-widest text-accent uppercase font-bold block mb-2">Intellectual Foundation</span>
+                <h4 class="font-serif text-lg text-dark-text font-normal mb-3">Founder Profile</h4>
+                
+                <p class="font-serif text-xs italic text-dark-text leading-relaxed">
+                  The company’s intellectual foundations were shaped by its founder, <span class="not-italic text-dark-text font-semibold">Dr. Barry Tse</span>, whose work bridges more than three decades of market and social research experience across Asia with formal academic training in psychology and behavioural science, including a PhD in Psychology.
+                </p>
+                
+                <div class="mt-4 pt-4 border-t border-[#EBEAE6] flex items-center gap-2">
+                  <div class="w-5 h-5 flex items-center justify-center rounded-full bg-accent text-white font-serif text-[10px] font-bold">
+                    Ψ
+                  </div>
+                  <span class="font-mono text-[9px] text-muted-text uppercase tracking-wider">Academic Behavioral Science Integration</span>
+                </div>
+              </div>
+
+              <!-- High-quality abstract cognitive pattern rendering -->
+              <div class="relative p-1 bg-warm-card border border-[#EBEAE6] shadow-2xs">
+                <img 
+                  src="/src/assets/images/cognitive_ink_1779377841949.png" 
+                  alt="Transcultural Psychology Pattern Visual" 
+                  class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" 
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: EXPERTISE -->
+        <section id="expertise" class="py-24 sm:py-32 border-b border-light-gray">
+          <header class="mb-14">
+            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">03 / Expertise</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Our Capabilities</h2>
+          </header>
+          
+          <!-- Advanced Grid layout without flashy boxes - Uses fine, luxurious minimalist borders resembling think-tank journals -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-light-gray border border-light-gray">
+            
+            <!-- Card 1 -->
+            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
+              <div>
+                <header class="flex items-center gap-4 mb-6">
+                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
+                    <i data-lucide="compass" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-serif text-xl font-normal text-dark-text">Market & Consumer Insight</h3>
+                </header>
+                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
+                  Investigating shifting dynamics, emerging subcultures, and consumer cohorts in China and across Asia. Moving past superficial data points to identify core motivations and value clusters.
+                </p>
+              </div>
+              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
+                Strategic Discovery <span class="text-[#D0CECB]">&middot;</span> Core Need
+              </footer>
+            </article>
+            
+            <!-- Card 2 -->
+            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
+              <div>
+                <header class="flex items-center gap-4 mb-6">
+                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
+                    <i data-lucide="target" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-serif text-xl font-normal text-dark-text">Brand & Communication Strategy</h3>
+                </header>
+                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
+                  Formulating brand positions grounded in deep cultural context. Bridging global brand philosophies with local social expectations to command resonance and credibility.
+                </p>
+              </div>
+              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
+                Cultural Positioning <span class="text-[#D0CECB]">&middot;</span> Strategy
+              </footer>
+            </article>
+            
+            <!-- Card 3 -->
+            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
+              <div>
+                <header class="flex items-center gap-4 mb-6">
+                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-serif text-xl font-normal text-dark-text">Qualitative & Quantitative Research</h3>
+                </header>
+                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
+                  Conducting hybrid methodologies custom-engineered for Asian social spheres. Leveraging focus groups, ethnography, large-scale surveys, and tracking studies.
+                </p>
+              </div>
+              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
+                Methodological Rigour <span class="text-[#D0CECB]">&middot;</span> Analysis
+              </footer>
+            </article>
+            
+            <!-- Card 4 -->
+            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
+              <div>
+                <header class="flex items-center gap-4 mb-6">
+                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-serif text-xl font-normal text-dark-text">China & Transcultural Advisory</h3>
+                </header>
+                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
+                  Deciphering structural tensions between localized markets and global mandates. Offering critical transcultural advisory for businesses navigating China.
+                </p>
+              </div>
+              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
+                Cross-Border Translation <span class="text-[#D0CECB]">&middot;</span> Risk
+              </footer>
+            </article>
+            
+          </div>
+
+          <!-- Editorial Image Banner showcasing the think-tank research setting -->
+          <div class="mt-12 group relative overflow-hidden bg-warm-card border border-light-gray p-4">
+            <div class="absolute inset-0 bg-dark-text/2 group-hover:bg-transparent transition-colors duration-500 z-10 animate-fade-in"></div>
+            <img 
+              src="/src/assets/images/consulting_study_1779377863738.png"
+              alt="WisdomAsia Scholarly Think-tank Bookcase and Library"
+              class="w-full h-80 object-cover opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.015]"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        </section>
+
+        <!-- SECTION 4: OUR PERSPECTIVE -->
+        <section id="perspective" class="py-24 sm:py-32 border-b border-light-gray relative z-10">
+          <header class="mb-14">
+            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">04 / Our Perspective</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">A Human System Approach</h2>
+          </header>
+          
+          <div class="max-w-4xl flex flex-col gap-12 font-sans">
+            <!-- Philosophy Preface -->
+            <p class="font-serif text-xl text-dark-text font-normal leading-relaxed">
+              We operate under the fundamental premise that markets are not merely cold transactional databases or economic frameworks, but complex, organic human systems bound together by shared psychology, cognitive biases, values, and societal progression.
+            </p>
+
+            <!-- Pillars of thought in editorial commentary panels - structured with gorgeous whitespace -->
+            <div class="flex flex-col gap-10 mt-4">
+              
+              <!-- Pillar 1 -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
+                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Consumer Behaviour</span>
+                <div class="text-muted-text flex-1">
+                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
+                    <i data-lucide="users" class="w-4 h-4 text-accent shrink-0"></i>
+                    China & Asian Consumer Dynamics
+                  </h3>
+                  <p class="text-sm sm:text-base leading-relaxed">
+                    Deciphering consumer shifts requires moving past simple demographic clusters. We track the subtle emotional, cognitive, and physical value orientations of modern cohorts as they balance tradition with hyper-urbanization.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Pillar 2 -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
+                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1 font-sans">Digital & Tech</span>
+                <div class="text-muted-text flex-1">
+                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
+                    <i data-lucide="cpu" class="w-4 h-4 text-accent shrink-0"></i>
+                    AI and Cultural Evolution
+                  </h3>
+                  <p class="text-[#605E5A] text-sm sm:text-base leading-relaxed">
+                    While generative AI and hyper-connectivity alter the tools of daily communication and productivity, deep-seated cultural structures, cognitive frameworks, and linguistic metaphors remain remarkably robust in Asian systems.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Pillar 3 -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
+                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Foundations</span>
+                <div class="text-muted-text flex-1">
+                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-accent shrink-0"></i>
+                    Academically informed Behavioural Science
+                  </h3>
+                  <p class="text-sm sm:text-base leading-relaxed">
+                    By integrating behavioral economics, social cognitive neuroscience, and cross-cultural psychology, we study the authentic human triggers that dictate loyalty, decisions, and structural changes.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Pillar 4 -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
+                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Societies</span>
+                <div class="text-muted-text flex-1">
+                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
+                    <i data-lucide="network" class="w-4 h-4 text-accent shrink-0"></i>
+                    Organisational and Social Insight
+                  </h3>
+                  <p class="text-sm sm:text-base leading-relaxed">
+                    Companies operate in broader social structures. We dissect structural values, organisational dynamics, and the deep undercurrents of social transitions to align commercial strategies with societal directions.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pillar 5 -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
+                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Interpretation</span>
+                <div class="text-muted-text flex-1">
+                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
+                    <i data-lucide="languages" class="w-4 h-4 text-accent shrink-0"></i>
+                    Transcultural Interpretation
+                  </h3>
+                  <p class="text-sm sm:text-base leading-relaxed">
+                    We bridge differing operational philosophies. We translate the nuances of local Asian markets into structural frameworks that global corporate executives understand, aligning insights with international strategic agendas.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- Editorial Image Banner showcasing "A Human System Approach" -->
+            <div class="mt-12 group relative overflow-hidden bg-warm-card border border-light-gray p-4">
+              <div class="absolute inset-0 bg-dark-text/2 group-hover:bg-transparent transition-colors duration-500 z-10 animate-fade-in"></div>
+              <img 
+                src="/src/assets/images/human_system_art_1779379141904.png"
+                alt="A Human System Approach Theme Art Illustration"
+                class="w-full h-80 object-cover opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.015]"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
+            <!-- Closing Scholarly Epigraph -->
+            <div class="mt-8 border bg-warm-card/25 border-light-gray p-10 text-center rounded-xs">
+              <span class="font-mono text-xs sm:text-sm tracking-[0.3em] text-accent uppercase font-bold block mb-4">Core Philosophy</span>
+              <p class="font-serif italic text-dark-text text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
+                &ldquo;We approach markets not merely as systems of transactions, but as human networks bound by culture, cognition, and values.&rdquo;
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5: CONTACT -->
+        <section id="contact" class="py-24 sm:py-32">
+          <header class="mb-14">
+            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">05 / Contact</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Contact</h2>
+          </header>
+          
+          <div class="max-w-3xl flex flex-col gap-16 font-sans">
+            
+            <!-- Prominent Hand-crafted Typographic Email link for direct inquiry -->
+            <div class="group border-b border-light-gray pb-12">
+              <span class="font-mono text-[10px] tracking-widest text-[#B81D24] uppercase font-bold block mb-4">Direct Research Inquiries</span>
+              <a 
+                href="mailto:enquiry@wisdomasia-mr.com" 
+                class="inline-flex items-center gap-3 font-serif text-xl sm:text-2xl md:text-3xl text-dark-text hover:text-accent font-light leading-tight transition-all duration-300 select-all border-b border-transparent hover:border-accent pb-1 cursor-pointer"
+              >
+                <i data-lucide="mail" class="w-5 h-5 text-accent"></i>
+                enquiry@wisdomasia-mr.com
+              </a>
+            </div>
+
+            <!-- Detailed structural metadata -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-4">
+              <!-- Address -->
+              <div class="flex flex-col gap-4">
+                <span class="font-mono text-[10px] tracking-widest text-[#B81D24] uppercase font-bold">Shanghai Office</span>
+                <address class="not-italic flex flex-col gap-2 font-sans text-muted-text text-base leading-relaxed">
+                  <span class="font-serif text-lg font-medium text-dark-text">WisdomAsia China</span>
+                  <span>Room 703, Golden Magnolia Plaza</span>
+                  <span>No.1 Dapu Road, Huangpu District</span>
+                  <span>Shanghai 200023, P.R. China</span>
+                </address>
+              </div>
+
+              <!-- Professional Network connections -->
+              <div class="flex flex-col gap-4">
+                <span class="font-mono text-[10px] tracking-widest text-[#B81D24] uppercase font-bold">Strategic Associations</span>
+                <div class="flex flex-col gap-4 items-start pt-1">
+                  <a 
+                    href="https://www.linkedin.com/company/wisdomasia/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="group inline-flex items-center gap-2.5 font-sans text-sm text-muted-text hover:text-accent transition-colors duration-250 pb-1 border-b border-transparent hover:border-accent"
+                  >
+                    <i data-lucide="linkedin" class="w-4 h-4 text-[#0077B5]"></i>
+                    Company LinkedIn
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                  </a>
+                  
+                  <a 
+                    href="https://winmr.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="group inline-flex items-center gap-2.5 font-sans text-sm text-muted-text hover:text-accent transition-colors duration-250 pb-1 border-b border-transparent hover:border-accent"
+                  >
+                    <i data-lucide="globe" class="w-4 h-4 text-accent"></i>
+                    Worldwide Independent Network (WIN)
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- C. MINIMAL FOOTER FOR THE THINK-TANK -->
+    <footer class="bg-[#FAF9F5] border-t border-light-gray py-12 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-[10px] text-muted-text uppercase tracking-widest">
+        <div class="flex items-center gap-2">
+          <span>WisdomAsia Research & Consulting</span>
+          <span>&middot;</span>
+          <span>Established 2004</span>
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-1 transition-colors duration-250">
+            WIN Network Member
+            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/wisdomasia/" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-1 transition-colors duration-250">
+            Company LinkedIn
+            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+        
+        <div class="text-center md:text-right mt-2 md:mt-0 select-none opacity-80">
+          © 2026 WisdomAsia. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Logic Script Module -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
