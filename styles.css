@@ -30,7 +30,7 @@
   --color-warm-bg: #FAF9F5; /* Primary warm white background */
   --color-warm-card: #F4F3EF; /* Slightly deeper warm white for structure */
   --color-dark-text: #1C1C1C; /* Professional dark gray / near black */
-  --color-light-gray: #EBEAE6; /* Subtle divide lines */
+   --color-light-gray: #EBEAE6; /* Subtle divide lines */
   --color-[#C0BEBA]: #C0BEBA;
   --color-muted-text: #605E5A; /* Understated reading scale */
 }
