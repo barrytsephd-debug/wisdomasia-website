@@ -125,73 +125,58 @@
       <!-- 2. MAIN SCROLLABLE CONTENT COLUMN -->
       <main class="flex-1 w-full px-6 md:px-12 lg:px-16 xl:px-24 pb-20 relative">
         
-        <!-- CULTURAL DECORATIVE BACKGROUND (Bespoke watermark elements integrated direct inside content container to preserve rendering overlays) -->
+        <!-- FACETED BRAND BACKGROUND (derived from the WisdomAsia icon's own low-poly gradient mark, replacing the previous heritage lattice/cloud motif) -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden select-none z-0" aria-hidden="true">
-          <!-- Full height background repeating subtle lattice pattern, faded beautifully -->
-          <svg class="absolute inset-0 w-full h-full opacity-[0.12] md:opacity-[0.18]" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shared gradient definition, sampled directly from the logo icon (deep red -> vivid orange) -->
+          <svg width="0" height="0" class="absolute">
             <defs>
-              <pattern id="traditionalLattice" width="80" height="80" patternUnits="userSpaceOnUse">
-                <!-- Classic Asian wood-carving lattice geometry -->
-                <rect width="80" height="80" fill="none" />
-                <!-- Border grid -->
-                <path d="M0 0 h80 v80 h-80 z" stroke="#B81D24" stroke-width="0.75" fill="none" />
-                <!-- Cross bars -->
-                <path d="M40 0 v80 M0 40 h80" stroke="#B81D24" stroke-width="0.5" fill="none" />
-                <!-- Traditional step-back geometric interlocking fretwork -->
-                <path d="M20 0 v20 h-20 M60 0 v20 h20 M20 80 v-20 h-20 M60 80 v-20 h20" stroke="#B81D24" stroke-width="0.5" fill="none" />
-                <path d="M40 20 h-10 v20 h10 v20" stroke="#B81D24" stroke-width="0.5" fill="none" />
-                <path d="M40 20 h10 v20 h-10 v20" stroke="#B81D24" stroke-width="0.5" fill="none" />
-                <circle cx="40" cy="40" r="4" stroke="#B81D24" stroke-width="0.5" fill="none" />
+              <linearGradient id="facetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#B81D24" />
+                <stop offset="100%" stop-color="#E6691E" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- Full height faint triangulated facet grid, echoing the icon's low-poly texture -->
+          <svg class="absolute inset-0 w-full h-full opacity-[0.07] md:opacity-[0.1]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="facetGrid" width="64" height="64" patternUnits="userSpaceOnUse">
+                <rect width="64" height="64" fill="none" />
+                <path d="M0 0 L32 18 L64 0" stroke="#B81D24" stroke-width="0.6" fill="none" />
+                <path d="M0 32 L32 18 L32 50 L0 64" stroke="#B81D24" stroke-width="0.6" fill="none" />
+                <path d="M64 32 L32 18 M32 50 L64 64 M32 50 L64 32" stroke="#B81D24" stroke-width="0.6" fill="none" />
+                <path d="M0 32 L0 64 M0 0 L0 32" stroke="#B81D24" stroke-width="0.6" fill="none" />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#traditionalLattice)" />
-          </svg>
-          
-          <!-- Elegant Auspicious Cloud Medallion 1 (Floating beautifully in the top-right of main view) -->
-          <svg class="absolute top-[8%] right-[-50px] md:right-4 w-[280px] h-[280px] text-[#B81D24] opacity-[0.15] hover:opacity-[0.25] transition-opacity duration-500" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="95" stroke-dasharray="4 4" />
-            <circle cx="100" cy="100" r="90" />
-            <circle cx="100" cy="100" r="80" stroke-dasharray="1 5" />
-            <!-- Auspicious Clouds inside the medallion -->
-            <path d="M70,100 C60,90 50,90 45,95 C40,100 45,110 55,115 C65,120 75,110 75,100 C75,90 65,80 55,80 C40,80 30,95 30,110 C30,125 45,135 60,135 C80,135 90,115 90,100 Z" />
-            <path d="M130,100 C140,90 150,90 155,95 C160,100 155,110 145,115 C135,120 125,110 125,100 C125,90 135,80 145,80 C160,80 170,95 170,110 C170,125 155,135 140,135 C120,135 110,115 110,100 Z" />
-            <!-- Central symmetric infinity loop knot -->
-            <path d="M92,94 Q100,86 108,94 Q116,102 108,110 Q100,114 92,106 Q84,98 92,106 Z" />
-            <path d="M108,94 Q100,86 92,94 Q84,102 92,110 Q100,114 108,106 Q116,98 108,94 Z" />
+            <rect width="100%" height="100%" fill="url(#facetGrid)" />
           </svg>
 
-          <!-- Elegant Auspicious Cloud Medallion 2 (Middle Left, behind perspective section) -->
-          <svg class="absolute top-[42%] left-[-80px] w-[260px] h-[260px] text-[#B81D24] opacity-[0.14] hover:opacity-[0.22] transition-opacity duration-500" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="92" />
-            <path d="M60,100 c0,-20 20,-30 40,-30 c20,0 40,10 40,30 c0,20 -20,30 -40,30 c-20,0 -40,-10 -40,-30 z" stroke-dasharray="2 3" />
-            <path d="M75,95 c-5,-5 -15,-5 -20,0 c-5,5 -5,15 0,20 c5,5 15,5 20,0" />
-            <path d="M125,95 c5,-5 15,-5 20,0 c5,5 5,15 0,20 c-5,5 -15,5 -20,0" />
-            <path d="M90,115c5,10 15,10 20,0" />
-            <circle cx="100" cy="100" r="5" />
+          <!-- Facet cluster 1 (top-right, behind Home) -->
+          <svg class="absolute top-[6%] right-[-40px] md:right-4 w-[260px] h-[260px] opacity-[0.16] hover:opacity-[0.26] transition-opacity duration-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,10 180,60 150,150 50,150 20,60" fill="none" stroke="url(#facetGradient)" stroke-width="1" />
+            <polygon points="100,10 180,60 120,95" fill="url(#facetGradient)" fill-opacity="0.35" stroke="none" />
+            <polygon points="20,60 100,10 80,95" fill="url(#facetGradient)" fill-opacity="0.18" stroke="none" />
+            <polygon points="80,95 120,95 150,150 50,150" fill="none" stroke="url(#facetGradient)" stroke-width="0.75" />
+            <path d="M100,10 L120,95 M100,10 L80,95 M20,60 L80,95 M180,60 L120,95 M50,150 L80,95 M150,150 L120,95" stroke="url(#facetGradient)" stroke-width="0.5" />
           </svg>
 
-          <!-- Minimal classical calligraphic brush seal watermark (Top Left) -->
-          <div class="absolute top-[3%] left-[2%] opacity-[0.16] select-none pointer-events-none hidden xl:block">
-            <svg class="w-16 h-16 text-[#B81D24]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="5" y="5" width="90" height="90" rx="4" stroke-width="2" />
-              <path d="M25,25 h50 M25,50 h50 M25,75 h50 M50,25 v50" stroke-width="1.5" />
-              <text x="50" y="58" font-family="'serif', 'PingFang SC', 'Microsoft YaHei'" font-weight="900" font-size="28" fill="currentColor" opacity="0.9" text-anchor="middle">精</text>
-            </svg>
-          </div>
+          <!-- Facet cluster 2 (middle-left, behind Perspective) -->
+          <svg class="absolute top-[42%] left-[-70px] w-[240px] h-[240px] opacity-[0.14] hover:opacity-[0.24] transition-opacity duration-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,15 175,70 145,165 55,165 25,70" fill="none" stroke="url(#facetGradient)" stroke-width="1" />
+            <polygon points="100,15 175,70 110,100" fill="url(#facetGradient)" fill-opacity="0.16" stroke="none" />
+            <polygon points="25,70 100,15 90,100" fill="url(#facetGradient)" fill-opacity="0.3" stroke="none" />
+            <path d="M100,15 L110,100 M100,15 L90,100 M25,70 L90,100 M175,70 L110,100 M55,165 L90,100 M145,165 L110,100" stroke="url(#facetGradient)" stroke-width="0.5" />
+          </svg>
 
-          <!-- Elegant Auspicious Cloud Medallion 3 (Bottom Right near Contact) -->
-          <svg class="absolute bottom-[5%] right-[-60px] w-[320px] h-[320px] text-[#B81D24] opacity-[0.15] hover:opacity-[0.25] transition-opacity duration-500" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="95" stroke-dasharray="3 3" />
-            <circle cx="100" cy="100" r="88" />
-            <!-- Symmetrical Cloud design -->
-            <path d="M70,105 C60,95 50,95 45,100 C40,105 45,115 55,120 C65,125 75,115 75,105 C75,95 65,85 55,85 C40,85 30,100 30,115 C30,130 45,140 60,140 C80,140 90,120 90,105 Z" />
-            <path d="M130,105 C140,95 150,95 155,100 C160,105 155,115 145,120 C135,125 125,115 125,105 C125,95 135,85 145,85 C160,85 170,100 170,115 C170,130 155,140 140,140 C120,140 110,120 110,105 Z" />
-            <!-- Waves stylized scrollwork at center -->
-            <path d="M85,105 Q100,120 115,105" />
-            <path d="M90,95 Q100,105 110,95" />
+          <!-- Facet cluster 3 (bottom-right, behind Contact) -->
+          <svg class="absolute bottom-[4%] right-[-55px] w-[300px] h-[300px] opacity-[0.16] hover:opacity-[0.26] transition-opacity duration-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,12 178,62 148,158 52,158 22,62" fill="none" stroke="url(#facetGradient)" stroke-width="1" />
+            <polygon points="148,158 178,62 122,98" fill="url(#facetGradient)" fill-opacity="0.3" stroke="none" />
+            <polygon points="52,158 22,62 78,98" fill="url(#facetGradient)" fill-opacity="0.15" stroke="none" />
+            <path d="M100,12 L122,98 M100,12 L78,98 M22,62 L78,98 M178,62 L122,98 M52,158 L78,98 M148,158 L122,98" stroke="url(#facetGradient)" stroke-width="0.5" />
           </svg>
         </div>
-        
+
         <!-- SECTION 1: HOME (Hero Scene) -->
         <section id="home" class="min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center py-16 border-b border-light-gray animate-fade-in relative z-10">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10">
@@ -211,9 +196,9 @@
               </p>
               
               <div class="flex">
-                <a 
-                  href="#contact" 
-                  class="inline-flex items-center gap-3 px-8 py-4 bg-accent text-white font-mono text-xs tracking-[0.25em] uppercase hover:bg-accent-dark hover:gap-4 transition-all duration-300 shadow-sm rounded-none cursor-pointer"
+                <a
+                  href="#contact"
+                  class="inline-flex items-center gap-3 px-8 py-4 bg-[linear-gradient(135deg,var(--color-accent),var(--color-accent-orange))] text-white font-mono text-xs tracking-[0.25em] uppercase hover:brightness-110 hover:gap-4 transition-all duration-300 shadow-sm rounded-none cursor-pointer"
                 >
                   Initiate Contact
                   <i data-lucide="arrow-right" class="w-4 h-4 transition-transform text-white"></i>

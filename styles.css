@@ -1,18 +1,22 @@
 /*
  * WisdomAsia Website - Stylesheet (V4 Tailwind & Custom Editorial Overrides)
  * Project: WisdomAsia Independent Research and Consulting
- * 
- * DESIGN RATIONALE:
- * - Soft warm off-white background (#FAF9F5) to feel scholarly, intellectual, and premium.
+ *
+ * DESIGN RATIONALE (v2 — aligned to the existing WisdomAsia logo mark):
+ * - Soft warm off-white background (#FAF9F5) retained — premium, uncluttered.
  * - Deep dark charcoal typography (#1C1C1C) for comfortable, authoritative reading.
- * - Restrained red accent (#B81D24) derived from the WisdomAsia brand identity.
- * - Serif headings (Lora) for editorial and research credibility.
- * - Sans-serif body (Inter) for clear readability.
- * - Monospace (JetBrains Mono) for structural signals, numbers, and structural metadata.
+ * - Accent red (#B81D24) retained as-is — it already matches the logo wordmark's
+ *   red (~#BE141E) almost exactly, so no change was needed here.
+ * - Accent-orange added, sampled from the logo icon's own gradient (~#E6691E),
+ *   used sparingly for gradient accents that echo the mark's facets.
+ * - Headings switched from Lora (literary serif) to Poppins (bold geometric sans)
+ *   to match the confident, modern-sans tone of the wordmark itself.
+ * - Sans-serif body (Inter) unchanged for clear readability.
+ * - Monospace (JetBrains Mono) unchanged for structural signals and metadata.
  */
 
 /* 1. Google Fonts Imports */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* 2. Tailwind CSS V4 Integration */
 @import "tailwindcss";
@@ -20,17 +24,18 @@
 /* 3. Custom Tailwind V4 Theme Configuration */
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Poppins", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
-  
-  --color-accent: #B81D24; /* Restrained Red */
+
+  --color-accent: #B81D24; /* Brand Red — matches the logo wordmark */
   --color-accent-dark: #8C1419; /* Deep Red for hover states */
+  --color-accent-orange: #E6691E; /* Sampled from the logo icon's own gradient */
   --color-accent-gold: #D4AF37; /* Classical Gold Thread */
   --color-accent-gold-dark: #A67C1E; /* Rich Bronze for contrasts */
   --color-warm-bg: #FAF9F5; /* Primary warm white background */
   --color-warm-card: #F4F3EF; /* Slightly deeper warm white for structure */
   --color-dark-text: #1C1C1C; /* Professional dark gray / near black */
-   --color-light-gray: #EBEAE6; /* Subtle divide lines */
+  --color-light-gray: #EBEAE6; /* Subtle divide lines */
   --color-[#C0BEBA]: #C0BEBA;
   --color-muted-text: #605E5A; /* Understated reading scale */
 }
