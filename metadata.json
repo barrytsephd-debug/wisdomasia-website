@@ -1,6 +1,0 @@
-{
-  "name": "WisdomAsia",
-  "description": "An independent research and consulting company specialising in Transcultural Intelligence across China and Asia.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
