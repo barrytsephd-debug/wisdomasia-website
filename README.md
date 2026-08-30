@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# WisdomAsia Website
 
-# Run and deploy your AI Studio app
+Source for [wisdomasia-mr.com](https://wisdomasia-mr.com) — a single-page static site for WisdomAsia's independent research and consulting practice.
 
-This contains everything you need to run your app locally.
+## Stack
 
-View your app in AI Studio: https://ai.studio/apps/989f06d2-a9d2-43c9-8677-ee1ed201085a
+- Plain HTML (`index.html`) and vanilla JavaScript (`script.js`) — no framework, no client-side routing.
+- Tailwind CSS v4, compiled at build time via the `@tailwindcss/vite` plugin from `styles.css`.
+- [Vite](https://vite.dev) is used only as a build step: it compiles `styles.css`, bundles `script.js`, and copies everything in `public/` (images, favicon) to the site root.
+- Icons via [Lucide](https://lucide.dev), loaded from a version-pinned CDN script tag in `index.html`.
 
-## Run Locally
+## Local development
 
-**Prerequisites:**  Node.js
+```
+npm install
+npm run dev
+```
 
+## Build
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```
+npm run build
+```
+
+Outputs the deployable static site to `dist/`.
+
+## Deployment
+
+Pushes to `main` are built and deployed automatically to GitHub Pages by `.github/workflows/deploy.yml`.

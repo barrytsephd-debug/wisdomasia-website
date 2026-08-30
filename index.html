@@ -19,15 +19,50 @@
     
     <!-- LinkedIn Cardinal Links -->
     <link rel="canonical" href="https://wisdomasia-mr.com" />
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/favicon.png">
-    
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+
+    <!-- Lucide Icons CDN (version pinned so an upstream release can't silently change or break every icon on the page) -->
+    <script src="https://unpkg.com/lucide@1.37.0"></script>
+
     <!-- Main Style Bundle (Vite processes this stylesheet compiling Tailwind CSS v4 directives) -->
     <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Structured Data: Organization schema for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WisdomAsia",
+        "alternateName": "WisdomAsia Marketing & Research Consulting",
+        "description": "Independent research and consulting company specialising in Transcultural Intelligence — behavioural insight and cultural interpretation across China and Asia.",
+        "url": "https://wisdomasia-mr.com",
+        "logo": "https://wisdomasia-mr.com/assets/logo.png",
+        "foundingDate": "2004",
+        "founder": {
+          "@type": "Person",
+          "name": "Dr. Barry Tse"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Room 703, Golden Magnolia Plaza, No.1 Dapu Road, Huangpu District",
+          "addressLocality": "Shanghai",
+          "postalCode": "200023",
+          "addressCountry": "CN"
+        },
+        "email": "enquiry@wisdomasia-mr.com",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Worldwide Independent Network of Market Research (WIN)",
+          "url": "https://winmr.com/"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/wisdomasia/",
+          "https://winmr.com/"
+        ]
+      }
+    </script>
   </head>
   <body class="bg-warm-bg text-dark-text antialiased relative min-h-screen overflow-x-hidden">
     
