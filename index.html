@@ -3,714 +3,468 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>WisdomAsia | Transcultural Intelligence, Research & Strategy across China & Asia</title>
-    <meta name="description" content="WisdomAsia is an independent research and consulting company specialising in Transcultural Intelligence across China and Asia. Established in 2004, bridging commercial research and academic behavioural science." />
-    <meta name="keywords" content="WisdomAsia, Transcultural Intelligence, China Market Research, Asia Consulting, Behavioural Science, Dr. Barry Tse, Consumer Insights, WIN Network China" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>WisdomAsia | Transcultural Intelligence · Market Research</title>
+    <meta
+      name="description"
+      content="Independent market research and consulting since 2004. Consumer, brand and communications research with particular expertise in China and an international perspective."
+    />
     <meta name="author" content="WisdomAsia" />
-    
-    <!-- Open Graph / Social Sharing Meta Tags -->
+    <link rel="canonical" href="https://wisdomasia-mr.com/" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="WisdomAsia | Transcultural Intelligence" />
-    <meta property="og:description" content="Independent research and consulting specialising in Transcultural Intelligence across China and Asia. Bridging behavioural insights and transcultural interpretation since 2004." />
-    <meta property="og:image" content="./assets/logo.png" />
-    <meta property="og:url" content="https://wisdomasia-mr.com" />
-    
-    <!-- LinkedIn Cardinal Links -->
-    <link rel="canonical" href="https://wisdomasia-mr.com" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-
-    <!-- Lucide Icons CDN (version pinned so an upstream release can't silently change or break every icon on the page) -->
-    <script src="https://unpkg.com/lucide@1.37.0"></script>
-
-    <!-- Main Style Bundle (Vite processes this stylesheet compiling Tailwind CSS v4 directives) -->
+    <meta
+      property="og:title"
+      content="WisdomAsia | Transcultural Intelligence"
+    />
+    <meta
+      property="og:description"
+      content="Independent market research with particular expertise in China. Understanding consumers, brands and markets in their cultural context since 2004."
+    />
+    <meta
+      property="og:image"
+      content="https://wisdomasia-mr.com/assets/logo.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="WisdomAsia — marketing & research consulting"
+    />
+    <meta property="og:url" content="https://wisdomasia-mr.com/" />
     <link rel="stylesheet" href="./styles.css" />
-
-    <!-- Structured Data: Organization schema for search engines -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "WisdomAsia",
-        "alternateName": "WisdomAsia Marketing & Research Consulting",
-        "description": "Independent research and consulting company specialising in Transcultural Intelligence — behavioural insight and cultural interpretation across China and Asia.",
-        "url": "https://wisdomasia-mr.com",
+        "url": "https://wisdomasia-mr.com/",
         "logo": "https://wisdomasia-mr.com/assets/logo.png",
         "foundingDate": "2004",
-        "founder": {
-          "@type": "Person",
-          "name": "Dr. Barry Tse"
-        },
+        "description": "Independent market research consultancy specialising in consumer, brand and communications research, with particular expertise in China.",
+        "email": "enquiry@wisdomasia-mr.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Room 703, Golden Magnolia Plaza, No.1 Dapu Road, Huangpu District",
+          "streetAddress": "Room 703, Golden Magnolia Plaza, No. 1 Dapu Road, Huangpu District",
           "addressLocality": "Shanghai",
           "postalCode": "200023",
           "addressCountry": "CN"
         },
-        "email": "enquiry@wisdomasia-mr.com",
         "memberOf": {
           "@type": "Organization",
-          "name": "Worldwide Independent Network of Market Research (WIN)",
+          "name": "Worldwide Independent Network of Market Research and Opinion Poll",
           "url": "https://winmr.com/"
         },
-        "sameAs": [
-          "https://www.linkedin.com/company/wisdomasia/",
-          "https://winmr.com/"
-        ]
+        "sameAs": ["https://www.linkedin.com/company/wisdomasia/"]
       }
     </script>
   </head>
-  <body class="bg-warm-bg text-dark-text antialiased relative min-h-screen overflow-x-hidden">
-    
-    <!-- A. RESPONSIVE MOBILE NAVIGATION HEADER (Visible on tablets and mobile screens only) -->
-    <header class="lg:hidden sticky top-0 z-50 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-light-gray px-6 py-4 flex justify-between items-center h-16 shadow-xs" id="mobile-header">
-      <a href="#home" class="flex items-center gap-2 transition-transform duration-300 hover:opacity-90" aria-label="WisdomAsia Home">
-        <img src="./assets/logo.png" alt="WisdomAsia logo" class="h-10 w-auto object-contain" />
-      </a>
-      
-      <!-- Hamburger Toggle Button -->
-      <button 
-        id="mobile-menu-toggle" 
-        class="text-dark-text p-2 hover:text-accent focus:outline-none transition-colors duration-250 cursor-pointer" 
-        aria-label="Toggle navigation menu"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </header>
-
-    <!-- MOBILE NAVIGATION OVERLAY PANEL -->
-    <div 
-      id="mobile-menu-overlay" 
-      class="hidden lg:hidden fixed inset-0 top-16 z-40 bg-[#FAF9F5] flex-col justify-between p-8 animation-fade-in transition-all duration-300"
-    >
-      <nav class="flex flex-col gap-8 pt-8">
-        <a href="#home" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Home</a>
-        <a href="#about" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">About</a>
-        <a href="#expertise" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Expertise</a>
-        <a href="#insights" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Recent Perspectives</a>
-        <a href="#perspective" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Our View</a>
-        <a href="#contact" class="nav-link font-serif text-3xl text-dark-text hover:text-accent">Contact</a>
-      </nav>
-      
-      <div class="border-t border-light-gray pt-6 flex flex-col gap-3">
-        <span class="font-mono text-xs text-muted-text uppercase tracking-widest">Global Affiliation</span>
-        <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-dark-text hover:text-accent flex items-center gap-1">
-          <img src="./assets/win_logo_transparent.png" alt="WIN - Worldwide Independent Network" class="h-4 w-auto object-contain" />
-          WIN Network Member
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-        </a>
-        <div class="flex gap-4 mt-2">
-          <a href="https://www.linkedin.com/company/wisdomasia/" target="_blank" rel="noopener noreferrer" class="text-[#0077B5] hover:opacity-85 transition-opacity" aria-label="WisdomAsia Company LinkedIn">
-            <i data-lucide="linkedin" class="w-5 h-5"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- B. DUAL-COLUMN MASTER LAYOUT -->
-    <div class="max-w-7xl mx-auto flex min-h-screen relative">
-      
-      <!-- 1. LEFT PINNED DESKTOP COMPACT NAV RAIL -->
-      <aside class="hidden lg:flex w-80 h-screen sticky top-0 flex-col justify-between py-16 px-10 border-r border-[#EBEAE6] bg-[#FAF9F5] z-30">
-        
-        <!-- Top branding & Compact graphical logo placement -->
-        <div class="flex flex-col items-center select-none">
-          <a href="#home" class="group focus:outline-none flex flex-col items-center text-center" aria-label="WisdomAsia homepage">
-            <img src="./assets/logo.png" alt="WisdomAsia logo" class="w-48 h-auto object-contain" />
-          </a>
-        </div>
-        
-        <!-- Middle section indicator menu -->
-        <nav class="flex flex-col gap-6 pl-4">
-          <a href="#home" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono active hover:text-accent">01. Home</a>
-          <a href="#about" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">02. About</a>
-          <a href="#expertise" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">03. Expertise</a>
-          <a href="#insights" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">04. Perspectives</a>
-          <a href="#perspective" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">05. Our View</a>
-          <a href="#contact" class="nav-link text-xs tracking-[0.2em] uppercase text-muted-text font-mono hover:text-accent">06. Contact</a>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="#home" aria-label="WisdomAsia home"
+          ><img
+            src="/assets/logo.png"
+            width="3290"
+            height="1076"
+            alt="WisdomAsia — marketing & research consulting"
+        /></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          hidden
+        >
+          <span class="menu-label">Menu</span
+          ><span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <nav id="primary-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#about">About</a
+          ><a class="nav-link" href="#expertise">Expertise</a
+          ><a class="nav-link" href="#philosophy">Philosophy</a
+          ><a class="nav-link" href="#network">Network</a
+          ><a class="nav-link nav-contact" href="#contact"
+            >Contact <span aria-hidden="true">↗</span></a
+          >
         </nav>
-        
-        <!-- Bottom metadata details -->
-        <div class="flex flex-col gap-4 text-xs font-mono text-muted-text border-t border-light-gray pt-6">
-          <div class="flex flex-col gap-1.5 pl-1">
-            <span class="text-[10px] text-muted-text uppercase tracking-widest font-semibold">Established 2004</span>
-            <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="text-[10px] hover:text-accent flex items-center gap-1.5 transition-colors duration-250">
-              <img src="./assets/win_logo_transparent.png" alt="WIN - Worldwide Independent Network" class="h-3.5 w-auto object-contain" />
-              WIN Market Research Member
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-          <div class="flex gap-3 pl-1 mt-1">
-            <a href="https://www.linkedin.com/company/wisdomasia/" target="_blank" rel="noopener noreferrer" class="text-muted-text hover:text-accent transition-colors duration-250 flex items-center gap-1.5" aria-label="WisdomAsia Company LinkedIn">
-              <i data-lucide="linkedin" class="w-4 h-4 text-[#0077B5]"></i>
-              <span class="text-[10px]">Company LinkedIn</span>
-            </a>
-          </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="/assets/chinese-urban-life.webp"
+          width="1672"
+          height="941"
+          alt="Illustrative contemporary Chinese shopping street with pedestrians and warmly lit storefronts"
+          fetchpriority="high"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Independent market research · Established 2004</p>
+          <p class="hero-tagline">Understanding markets. Across cultures.</p>
+          <h1 id="hero-title">Transcultural<br /><span>Intelligence</span></h1>
+          <p class="hero-description">
+            Consumer, brand and communications research.<br />China expertise.
+            An international perspective.
+          </p>
+          <a class="button" href="#expertise"
+            >Explore our expertise <span aria-hidden="true">↗</span></a
+          >
         </div>
-      </aside>
-
-      <!-- 2. MAIN SCROLLABLE CONTENT COLUMN -->
-      <main class="flex-1 w-full px-6 md:px-12 lg:px-16 xl:px-24 pb-20 relative">
-        
-        <!-- FACETED BRAND BACKGROUND (derived from the WisdomAsia icon's own low-poly gradient mark, replacing the previous heritage lattice/cloud motif) -->
-        <div class="absolute inset-0 pointer-events-none overflow-hidden select-none z-0" aria-hidden="true">
-          <!-- Shared gradient definition, sampled directly from the logo icon (deep red -> vivid orange) -->
-          <svg width="0" height="0" class="absolute">
-            <defs>
-              <linearGradient id="facetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#B81D24" />
-                <stop offset="100%" stop-color="#E6691E" />
-              </linearGradient>
-            </defs>
-          </svg>
-
-          <!-- Full height faint triangulated facet grid, echoing the icon's low-poly texture -->
-          <svg class="absolute inset-0 w-full h-full opacity-[0.07] md:opacity-[0.1]" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="facetGrid" width="64" height="64" patternUnits="userSpaceOnUse">
-                <rect width="64" height="64" fill="none" />
-                <path d="M0 0 L32 18 L64 0" stroke="#B81D24" stroke-width="0.6" fill="none" />
-                <path d="M0 32 L32 18 L32 50 L0 64" stroke="#B81D24" stroke-width="0.6" fill="none" />
-                <path d="M64 32 L32 18 M32 50 L64 64 M32 50 L64 32" stroke="#B81D24" stroke-width="0.6" fill="none" />
-                <path d="M0 32 L0 64 M0 0 L0 32" stroke="#B81D24" stroke-width="0.6" fill="none" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#facetGrid)" />
-          </svg>
-
-          <!-- Facet cluster 1 (top-right, behind Home) -->
-          <svg class="absolute top-[6%] right-[-40px] md:right-4 w-[260px] h-[260px] opacity-[0.16] hover:opacity-[0.26] transition-opacity duration-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="100,10 180,60 150,150 50,150 20,60" fill="none" stroke="url(#facetGradient)" stroke-width="1" />
-            <polygon points="100,10 180,60 120,95" fill="url(#facetGradient)" fill-opacity="0.35" stroke="none" />
-            <polygon points="20,60 100,10 80,95" fill="url(#facetGradient)" fill-opacity="0.18" stroke="none" />
-            <polygon points="80,95 120,95 150,150 50,150" fill="none" stroke="url(#facetGradient)" stroke-width="0.75" />
-            <path d="M100,10 L120,95 M100,10 L80,95 M20,60 L80,95 M180,60 L120,95 M50,150 L80,95 M150,150 L120,95" stroke="url(#facetGradient)" stroke-width="0.5" />
-          </svg>
-
-          <!-- Facet cluster 2 (middle-left, behind Perspective) -->
-          <svg class="absolute top-[42%] left-[-70px] w-[240px] h-[240px] opacity-[0.14] hover:opacity-[0.24] transition-opacity duration-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="100,15 175,70 145,165 55,165 25,70" fill="none" stroke="url(#facetGradient)" stroke-width="1" />
-            <polygon points="100,15 175,70 110,100" fill="url(#facetGradient)" fill-opacity="0.16" stroke="none" />
-            <polygon points="25,70 100,15 90,100" fill="url(#facetGradient)" fill-opacity="0.3" stroke="none" />
-            <path d="M100,15 L110,100 M100,15 L90,100 M25,70 L90,100 M175,70 L110,100 M55,165 L90,100 M145,165 L110,100" stroke="url(#facetGradient)" stroke-width="0.5" />
-          </svg>
-
-          <!-- Facet cluster 3 (bottom-right, behind Contact) -->
-          <svg class="absolute bottom-[4%] right-[-55px] w-[300px] h-[300px] opacity-[0.16] hover:opacity-[0.26] transition-opacity duration-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="100,12 178,62 148,158 52,158 22,62" fill="none" stroke="url(#facetGradient)" stroke-width="1" />
-            <polygon points="148,158 178,62 122,98" fill="url(#facetGradient)" fill-opacity="0.3" stroke="none" />
-            <polygon points="52,158 22,62 78,98" fill="url(#facetGradient)" fill-opacity="0.15" stroke="none" />
-            <path d="M100,12 L122,98 M100,12 L78,98 M22,62 L78,98 M178,62 L122,98 M52,158 L78,98 M148,158 L122,98" stroke="url(#facetGradient)" stroke-width="0.5" />
-          </svg>
+        <div class="hero-bottom container">
+          <span>People. Culture. Meaning.</span
+          ><a href="#about"
+            >Discover WisdomAsia <span aria-hidden="true">↓</span></a
+          >
         </div>
-
-        <!-- SECTION 1: HOME (Hero Scene) -->
-        <section id="home" class="min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center py-16 border-b border-light-gray animate-fade-in relative z-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10">
-            <!-- Left Narrative Column (7/12 grid) -->
-            <div class="lg:col-span-7 flex flex-col justify-center">
-              <!-- Company Logo on Hero landing -->
-              <div class="mb-14 select-none flex items-center justify-center row">
-                <img src="./assets/logo.png" alt="WisdomAsia logo" class="w-[512px] h-auto object-contain" />
-              </div>
-              
-              <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-dark-text font-normal leading-tight tracking-tight mb-8">
-                Transcultural Intelligence
-              </h1>
-              
-              <p class="font-serif text-lg sm:text-xl text-muted-text font-light leading-relaxed mb-12">
-                Behavioural insight and cultural interpretation across China and Asia.
-              </p>
-              
-              <div class="flex">
-                <a
-                  href="#contact"
-                  class="inline-flex items-center gap-3 px-8 py-4 bg-[linear-gradient(135deg,var(--color-accent),var(--color-accent-orange))] text-white font-mono text-xs tracking-[0.25em] uppercase hover:brightness-110 hover:gap-4 transition-all duration-300 shadow-sm rounded-none cursor-pointer"
-                >
-                  Initiate Contact
-                  <i data-lucide="arrow-right" class="w-4 h-4 transition-transform text-white"></i>
-                </a>
-              </div>
-            </div>
-            
-            <!-- Right custom visual image (5/12 grid) -->
-            <div class="lg:col-span-5 flex justify-center">
-              <div class="relative p-2 bg-warm-card border border-light-gray shadow-sm">
-                <!-- Subtle decorative gold corner bars on graphic representing traditional framing -->
-                <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-accent-gold-dark"></div>
-                <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-accent-gold-dark"></div>
-                
-                <img 
-                  src="./src/assets/images/hero_workspace_1779377819153.png" 
-                  alt="Scholarly Research workspace desk layout" 
-                  class="w-full max-w-sm h-auto object-cover border border-[#C0BEBA]/30 hover:opacity-95 transition-opacity" 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 2: ABOUT -->
-        <section id="about" class="py-24 sm:py-32 border-b border-light-gray">
-          <header class="mb-12">
-            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">02 / About</span>
-            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Origins & Intellectual Foundation</h2>
-          </header>
-          
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-8">
-            <!-- Left Narrative Column (7/12 grid) -->
-            <div class="lg:col-span-7 font-sans text-muted-text text-sm sm:text-base leading-relaxed flex flex-col gap-6">
-              <p>
-                WisdomAsia was established in 2004 by research and consulting professionals working across China and Asia who believed that market understanding must evolve alongside social change, cultural transformation, and technological disruption.
-              </p>
-              
-              <p>
-                While methodologies and analytical tools continue to advance, meaningful insight into human behaviour still depends on strong foundations in psychology, culture, and the behavioural sciences.
-              </p>
-              
-              <p>
-                Combining commercial research experience with transcultural interpretation and academically informed behavioural insight, WisdomAsia approaches markets not merely as economic systems, but as human systems shaped by identity, values, cognition, institutions, and social change.
-              </p>
-
-              <p>
-                Today, WisdomAsia operates at the intersection of research, strategy, and cultural interpretation, supporting organisations navigating the complexities of China and broader Asian markets.
-              </p>
-              
-              <p>
-                WisdomAsia is the China member of the <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="editorial-link font-medium text-dark-text hover:text-accent inline-flex items-center gap-1 bg-warm-card/10 border-b border-[#C0BEBA]/40 px-1 py-0.5">Worldwide Independent Network of Market Research (WIN)<i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-accent"></i></a> - a global association of independent market research and polling firms spanning multiple countries and regions.
-              </p>
-            </div>
-            
-            <!-- Right Scholar / Founder Text Box & Psychology Art column (5/12 grid) -->
-            <div class="lg:col-span-5 flex flex-col gap-6">
-              <!-- Dr Barry Tse Biography Box - Smaller Font & Polished Text Box -->
-              <div class="bg-warm-card border border-light-gray p-6 relative rounded-sm shadow-2xs">
-                <!-- Golden Accent line -->
-                <div class="h-0.5 w-12 bg-accent-gold mb-3"></div>
-                
-                <span class="font-mono text-[9px] tracking-widest text-accent uppercase font-bold block mb-2">Intellectual Foundation</span>
-                <h4 class="font-serif text-lg text-dark-text font-normal mb-3">Founder Profile</h4>
-                
-                <p class="font-serif text-xs italic text-dark-text leading-relaxed">
-                  <span class="not-italic text-dark-text font-semibold">Dr. Barry Tse</span>, founder of WisdomAsia, brings together more than three decades of market and social research experience across Asia with formal academic training in psychology and behavioural science, including a PhD in Psychology. His work integrates commercial research, transcultural interpretation, and behavioural science to help organisations better understand the cultural, social, and psychological forces shaping markets across China and Asia.
-                </p>
-                
-                <div class="mt-4 pt-4 border-t border-[#EBEAE6] flex items-center gap-2">
-                  <div class="w-5 h-5 flex items-center justify-center rounded-full bg-accent text-white font-serif text-[10px] font-bold">
-                    Ψ
-                  </div>
-                  <span class="font-mono text-[9px] text-muted-text uppercase tracking-wider">Behavioural Science · Culture · Transcultural Intelligence</span>
-                </div>
-              </div>
-
-              <!-- High-quality abstract cognitive pattern rendering -->
-              <div class="relative p-1 bg-warm-card border border-[#EBEAE6] shadow-2xs">
-                <img 
-                  src="./src/assets/images/cognitive_ink_1779377841949.png" 
-                  alt="Transcultural Psychology Pattern Visual" 
-                  class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 3: EXPERTISE -->
-        <section id="expertise" class="py-24 sm:py-32 border-b border-light-gray">
-          <header class="mb-14">
-            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">03 / Expertise</span>
-            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Our Capabilities</h2>
-          </header>
-          
-          <!-- Advanced Grid layout without flashy boxes - Uses fine, luxurious minimalist borders resembling think-tank journals -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-light-gray border border-light-gray">
-            
-            <!-- Card 1 -->
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <header class="flex items-center gap-4 mb-6">
-                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
-                    <i data-lucide="compass" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="font-serif text-xl font-normal text-dark-text">Market & Consumer Insight</h3>
-                </header>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  Interpreting evolving consumer realities across China and Asia through culturally grounded inquiry. Moving beyond descriptive metrics to uncover motivational structures, symbolic meanings, and emerging social identities.
-                </p>
-              </div>
-              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
-                Consumer Transformation <span class="text-[#D0CECB]">&middot;</span> Cultural Intelligence
-              </footer>
-            </article>
-            
-            <!-- Card 2 -->
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <header class="flex items-center gap-4 mb-6">
-                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
-                    <i data-lucide="target" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="font-serif text-xl font-normal text-dark-text">Brand & Communication Strategy</h3>
-                </header>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  Developing brand strategies calibrated to local cultural logic and shifting social expectations. Aligning global positioning with the behavioural realities of Asian markets.
-                </p>
-              </div>
-              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
-                Positioning Architecture <span class="text-[#D0CECB]">&middot;</span> Narrative Strategy
-              </footer>
-            </article>
-            
-            <!-- Card 3 -->
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <header class="flex items-center gap-4 mb-6">
-                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
-                    <i data-lucide="trending-up" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="font-serif text-xl font-normal text-dark-text">Qualitative & Quantitative Research</h3>
-                </header>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  Designing integrated research frameworks tailored to complex Asian market environments. Combining ethnography, focus groups, large-scale surveys, and longitudinal tracking with analytical depth.
-                </p>
-              </div>
-              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
-                Hybrid Methodologies <span class="text-[#D0CECB]">&middot;</span> Strategic Analysis
-              </footer>
-            </article>
-            
-            <!-- Card 4 -->
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <header class="flex items-center gap-4 mb-6">
-                  <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs">
-                    <i data-lucide="globe" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="font-serif text-xl font-normal text-dark-text">China & Transcultural Advisory</h3>
-                </header>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  Helping organisations navigate the structural, cultural, and strategic tensions between China and global operating systems. Providing transcultural interpretation for decision-making under complexity.
-                </p>
-              </div>
-              <footer class="mt-8 font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1">
-                Cross-Cultural Translation <span class="text-[#D0CECB]">&middot;</span> Strategic Risk
-              </footer>
-            </article>
-            
-          </div>
-
-          <!-- Editorial Image Banner showcasing the think-tank research setting -->
-          <div class="mt-12 group relative overflow-hidden bg-warm-card border border-light-gray p-4">
-            <div class="absolute inset-0 bg-dark-text/2 group-hover:bg-transparent transition-colors duration-500 z-10 animate-fade-in"></div>
-            <img 
-              src="./src/assets/images/consulting_study_1779377863738.png"
-              alt="WisdomAsia Scholarly Think-tank Bookcase and Library"
-              class="w-full h-80 object-cover opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.015]"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-        </section>
-
-        <!-- SECTION 4: RECENT PERSPECTIVES -->
-        <section id="insights" class="py-24 sm:py-32 border-b border-light-gray">
-          <header class="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <div>
-              <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">04 / Recent Perspectives</span>
-              <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Field Notes from the Region</h2>
-            </div>
-            <a href="https://www.linkedin.com/company/wisdomasia/posts/" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] text-muted-text hover:text-accent uppercase tracking-widest font-semibold flex items-center gap-1.5 transition-colors duration-250 shrink-0">
-              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0077B5]"></i>
-              More on LinkedIn
-            </a>
-          </header>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-light-gray border border-light-gray">
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs mb-6">
-                  <i data-lucide="users" class="w-5 h-5"></i>
-                </div>
-                <h3 class="font-serif text-xl font-normal text-dark-text mb-3">China's Generational Paradox</h3>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  Behind China's reassuringly high scores on the WIN Worldviews Survey 2026 sits a sharper story: the mid-life generation, squeezed between ageing parents and children under the legacy of the one-child policy, reports markedly less confidence than every other age group.
-                </p>
-              </div>
-              <footer class="mt-8 pt-6 border-t border-light-gray/70 flex flex-col gap-3">
-                <span class="font-mono text-[10px] text-muted-text uppercase tracking-widest font-semibold">August 2026 &middot; 6 min read</span>
-                <a href="https://www.linkedin.com/pulse/chinas-generational-paradox-wisdomasia-dd2fc" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1 hover:opacity-70 transition-opacity duration-250 w-fit">
-                  Read on LinkedIn
-                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                </a>
-              </footer>
-            </article>
-
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs mb-6">
-                  <i data-lucide="brain-circuit" class="w-5 h-5"></i>
-                </div>
-                <h3 class="font-serif text-xl font-normal text-dark-text mb-3">The Algorithm Doesn't Know Your Brand</h3>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  As AI-generated summaries increasingly mediate how consumers discover and judge brands, algorithmic visibility is emerging as a strategic asset distinct from — and sometimes at odds with — traditional search and social metrics.
-                </p>
-              </div>
-              <footer class="mt-8 pt-6 border-t border-light-gray/70 flex flex-col gap-3">
-                <span class="font-mono text-[10px] text-muted-text uppercase tracking-widest font-semibold">June 2026 &middot; 8 min read</span>
-                <a href="https://www.linkedin.com/pulse/algorithm-doesnt-know-your-brand-wisdomasia-4qtlc" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1 hover:opacity-70 transition-opacity duration-250 w-fit">
-                  Read on LinkedIn
-                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                </a>
-              </footer>
-            </article>
-
-            <article class="bg-[#FAF9F5] p-10 flex flex-col justify-between hover:bg-[#F5F4F0] transition-colors duration-300">
-              <div>
-                <div class="w-10 h-10 flex items-center justify-center border border-accent/20 bg-accent/5 text-accent rounded-xs mb-6">
-                  <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-                </div>
-                <h3 class="font-serif text-xl font-normal text-dark-text mb-3">AI as Utility, Not Novelty</h3>
-                <p class="text-muted-text text-sm sm:text-base leading-relaxed">
-                  Findings from the WIN World AI Index 2026 show Chinese consumers have moved past AI novelty and now judge these tools on practical utility — a shift with direct implications for how brands position AI-enabled products.
-                </p>
-              </div>
-              <footer class="mt-8 pt-6 border-t border-light-gray/70 flex flex-col gap-3">
-                <span class="font-mono text-[10px] text-muted-text uppercase tracking-widest font-semibold">May 2026 &middot; 7 min read</span>
-                <a href="https://www.linkedin.com/pulse/ai-utility-novelty-china-win-world-index-2026-wisdomasia-iwtwc" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] text-accent uppercase tracking-widest font-semibold flex items-center gap-1 hover:opacity-70 transition-opacity duration-250 w-fit">
-                  Read on LinkedIn
-                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                </a>
-              </footer>
-            </article>
-          </div>
-        </section>
-
-        <!-- SECTION 5: OUR PERSPECTIVE -->
-        <section id="perspective" class="py-24 sm:py-32 border-b border-light-gray relative z-10">
-          <header class="mb-14">
-            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">05 / Our Perspective</span>
-            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">A Human System Approach</h2>
-          </header>
-          
-          <div class="max-w-4xl flex flex-col gap-12 font-sans">
-            <!-- Philosophy Preface -->
-            <p class="font-serif text-xl text-dark-text font-normal leading-relaxed">
-              We approach markets not simply as economic environments, but as human systems shaped by psychology, culture, social values, institutional structures, and collective behaviour. Understanding change in Asia requires more than data interpretation alone. It requires cultural interpretation.
-            </p>
-
-            <!-- Pillars of thought in editorial commentary panels - structured with gorgeous whitespace -->
-            <div class="flex flex-col gap-10 mt-4">
-              
-              <!-- Pillar 1 -->
-              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
-                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Consumer Behaviour</span>
-                <div class="text-muted-text flex-1">
-                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
-                    <i data-lucide="users" class="w-4 h-4 text-accent shrink-0"></i>
-                    China & Asian Consumer Dynamics
-                  </h3>
-                  <p class="text-sm sm:text-base leading-relaxed">
-                    Consumer behaviour across Asia is increasingly shaped by tensions between tradition, mobility, digitalisation, identity, and social aspiration. We move beyond demographic segmentation to examine the emotional, cognitive, and cultural forces shaping emerging consumer behaviours.
-                  </p>
-                </div>
-              </div>
-              
-              <!-- Pillar 2 -->
-              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
-                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1 font-sans">Digital & Tech</span>
-                <div class="text-muted-text flex-1">
-                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
-                    <i data-lucide="cpu" class="w-4 h-4 text-accent shrink-0"></i>
-                    AI and Cultural Evolution
-                  </h3>
-                  <p class="text-[#605E5A] text-sm sm:text-base leading-relaxed">
-                    Technological change may transform communication, consumption, and productivity, but enduring cultural assumptions, social norms, and linguistic patterns continue to shape how technologies are adopted and understood within Asian societies.
-                  </p>
-                </div>
-              </div>
-              
-              <!-- Pillar 3 -->
-              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
-                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Foundations</span>
-                <div class="text-muted-text flex-1">
-                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
-                    <i data-lucide="graduation-cap" class="w-4 h-4 text-accent shrink-0"></i>
-                    Behavioural Science-informed Insight
-                  </h3>
-                  <p class="text-sm sm:text-base leading-relaxed">
-                    Our work draws from behavioural science, psychology, and cross-cultural research to better understand the human factors influencing perception, decision-making, trust, loyalty, and organisational change.
-                  </p>
-                </div>
-              </div>
-              
-              <!-- Pillar 4 -->
-              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
-                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Societies</span>
-                <div class="text-muted-text flex-1">
-                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
-                    <i data-lucide="network" class="w-4 h-4 text-accent shrink-0"></i>
-                    Organisational and Social Insight
-                  </h3>
-                  <p class="text-sm sm:text-base leading-relaxed">
-                    Businesses operate within broader social systems. We examine organisational cultures, shifting social values, and structural transitions to help organisations align commercial strategies with evolving societal realities.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Pillar 5 -->
-              <div class="flex flex-col md:flex-row gap-4 md:gap-8 border-t border-light-gray pt-8">
-                <span class="font-mono text-xs text-accent font-semibold tracking-widest uppercase md:w-36 shrink-0 mt-1">Interpretation</span>
-                <div class="text-muted-text flex-1">
-                  <h3 class="text-dark-text font-serif text-lg font-medium mb-2 flex items-center gap-2">
-                    <i data-lucide="languages" class="w-4 h-4 text-accent shrink-0"></i>
-                    Transcultural Interpretation
-                  </h3>
-                  <p class="text-sm sm:text-base leading-relaxed">
-                    We help bridge differing cultural and operational worldviews by translating local market realities into strategic insight that global organisations can meaningfully interpret and apply.
-                  </p>
-                </div>
-              </div>
-              
-            </div>
-
-            <!-- Editorial Image Banner showcasing "A Human System Approach" -->
-            <div class="mt-12 group relative overflow-hidden bg-warm-card border border-light-gray p-4">
-              <div class="absolute inset-0 bg-dark-text/2 group-hover:bg-transparent transition-colors duration-500 z-10 animate-fade-in"></div>
-              <img 
-                src="./src/assets/images/human_system_art_1779379141904.png"
-                alt="A Human System Approach Theme Art Illustration"
-                class="w-full h-80 object-cover opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.015]"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-            <!-- Closing Scholarly Epigraph -->
-            <div class="mt-8 border bg-warm-card/25 border-light-gray p-10 text-center rounded-xs">
-              <span class="font-mono text-xs sm:text-sm tracking-[0.3em] text-accent uppercase font-bold block mb-4">Core Philosophy</span>
-              <p class="font-serif italic text-dark-text text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
-                &ldquo;Markets are not just economic systems. They are human systems shaped by culture, behaviour, and belief.&rdquo;
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 6: CONTACT -->
-        <section id="contact" class="py-24 sm:py-32">
-          <header class="mb-14">
-            <span class="font-mono text-xs text-accent uppercase tracking-[0.25em] mb-3 block font-semibold">06 / Contact</span>
-            <h2 class="font-serif text-4xl sm:text-5xl text-dark-text font-normal tracking-tight">Contact</h2>
-          </header>
-          
-          <div class="max-w-3xl flex flex-col gap-16 font-sans">
-            
-            <!-- Prominent Hand-crafted Typographic Email link for direct inquiry -->
-            <div class="group border-b border-light-gray pb-12">
-              <span class="font-mono text-[10px] tracking-widest text-[#B81D24] uppercase font-bold block mb-4">Direct Research Inquiries</span>
-              <a 
-                href="mailto:enquiry@wisdomasia-mr.com" 
-                class="inline-flex items-center gap-3 font-serif text-xl sm:text-2xl md:text-3xl text-dark-text hover:text-accent font-light leading-tight transition-all duration-300 select-all border-b border-transparent hover:border-accent pb-1 cursor-pointer"
-              >
-                <i data-lucide="mail" class="w-5 h-5 text-accent"></i>
-                enquiry@wisdomasia-mr.com
-              </a>
-            </div>
-
-            <!-- Detailed structural metadata -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-4">
-              <!-- Address -->
-              <div class="flex flex-col gap-4">
-                <span class="font-mono text-[10px] tracking-widest text-[#B81D24] uppercase font-bold">Shanghai Office</span>
-                <address class="not-italic flex flex-col gap-2 font-sans text-muted-text text-base leading-relaxed">
-                  <span class="font-serif text-lg font-medium text-dark-text">WisdomAsia China</span>
-                  <span>Room 703, Golden Magnolia Plaza</span>
-                  <span>No.1 Dapu Road, Huangpu District</span>
-                  <span>Shanghai 200023, P.R. China</span>
-                </address>
-              </div>
-
-              <!-- Professional Network connections -->
-              <div class="flex flex-col gap-4">
-                <span class="font-mono text-[10px] tracking-widest text-[#B81D24] uppercase font-bold">Strategic Associations</span>
-                <div class="flex flex-col gap-4 items-start pt-1">
-                  <a 
-                  href="https://www.linkedin.com/company/wisdomasia/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="group inline-flex items-center gap-2.5 font-sans text-sm text-muted-text hover:text-accent transition-colors duration-250 pb-1 border-b border-transparent hover:border-accent"
-                  >
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      class="w-4 h-4 shrink-0"
-                      fill="#0077B5"
-                    >
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    Company LinkedIn
-                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
-                  </a>
-                  
-                  <a 
-                    href="https://winmr.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="group inline-flex items-center gap-2.5 font-sans text-sm text-muted-text hover:text-accent transition-colors duration-250 pb-1 border-b border-transparent hover:border-accent"
-                  >
-                    <img src="./assets/win_logo_transparent.png" alt="WIN - Worldwide Independent Network" class="h-5 w-auto object-contain shrink-0" />
-                    Worldwide Independent Network (WIN)
-                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-      </main>
-    </div>
-
-    <!-- C. MINIMAL FOOTER FOR THE THINK-TANK -->
-    <footer class="bg-[#FAF9F5] border-t border-light-gray py-12 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-[10px] text-muted-text uppercase tracking-widest">
-        <div class="flex items-center gap-2">
-          <span>WisdomAsia Research & Consulting</span>
-          <span>&middot;</span>
-          <span>Established 2004</span>
-        </div>
-        
-        <div class="flex items-center gap-6">
-          <a href="https://winmr.com/" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-1 transition-colors duration-250">
-            WIN Network Member
-            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/wisdomasia/" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-1 transition-colors duration-250">
-            Company LinkedIn
-            <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-        
-        <div class="text-center md:text-right mt-2 md:mt-0 select-none opacity-80">
-          © 2026 WisdomAsia. All rights reserved.
+      </section>
+      <div class="brand-ribbon">
+        <div class="container">
+          <span>Independent in thinking.</span><span>Experienced in China.</span
+          ><span>Connected internationally.</span>
         </div>
       </div>
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="container section-grid">
+          <div>
+            <p class="eyebrow">01 / About WisdomAsia</p>
+            <h2 id="about-title">
+              An independent mind.<br />An informed perspective.
+            </h2>
+          </div>
+          <div class="section-copy">
+            <p class="lead">
+              Established in 2004, WisdomAsia is an independent market research
+              consultancy specialising in consumer, brand and communications
+              research, with particular expertise in China.
+            </p>
+            <p>
+              We draw on international research experience and trusted
+              professional relationships to shape each assignment around the
+              question at hand. Our work connects local market understanding
+              with the wider perspective organisations need to make informed
+              decisions.
+            </p>
+            <p>
+              Our longstanding philosophy, <em>Transcultural Intelligence</em>,
+              is simple: research becomes more valuable when findings are
+              understood in their cultural context.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section expertise-section container"
+        id="expertise"
+        aria-labelledby="expertise-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / Our expertise</p>
+            <h2 id="expertise-title">
+              The right research.<br />A clearer way forward.
+            </h2>
+          </div>
+          <p>
+            From understanding a market to refining a brand, we design research
+            around the decisions you need to make.
+          </p>
+        </div>
+        <div class="expertise-visual">
+          <img
+            src="/assets/consumer-understanding.webp"
+            width="1672"
+            height="941"
+            alt="Illustrative scene of two Chinese consumers considering a product together in a shop"
+            loading="lazy"
+          />
+          <div>
+            <span class="eyebrow">Understanding people</span>
+            <p>
+              Different perspectives.<br /><strong
+                >Deeper understanding.</strong
+              >
+            </p>
+          </div>
+        </div>
+        <div class="expertise-grid">
+          <article class="expertise-item">
+            <span class="item-number">01</span>
+            <h3>Consumer & market<br />understanding</h3>
+            <p>
+              Understand what people need, how they choose and what matters in
+              their everyday lives. Explore motivations, usage and local market
+              context to identify relevant opportunities.
+            </p>
+            <p class="method-note">
+              Consumer needs · Usage & attitudes · Market exploration
+            </p>
+          </article>
+          <article class="expertise-item">
+            <span class="item-number">02</span>
+            <h3>Brand & communications<br />research</h3>
+            <p>
+              Understand how your brand is perceived and how your message is
+              received. Evaluate positioning, concepts and communications with
+              attention to cultural meaning and audience response.
+            </p>
+            <p class="method-note">
+              Brand perceptions · Positioning · Communications evaluation
+            </p>
+          </article>
+          <article class="expertise-item">
+            <span class="item-number">03</span>
+            <h3>Qualitative<br />research</h3>
+            <p>
+              Explore the reasons behind attitudes and behaviour through
+              conversation and observation. Bring depth and context to the
+              experiences that surveys alone may not explain.
+            </p>
+            <p class="method-note">
+              Focus groups · In-depth interviews · Contextual observation
+            </p>
+          </article>
+          <article class="expertise-item">
+            <span class="item-number">04</span>
+            <h3>Quantitative<br />research</h3>
+            <p>
+              Measure attitudes, test ideas and compare audiences through
+              structured research. Translate patterns in the data into a clear
+              understanding of what they mean for your business.
+            </p>
+            <p class="method-note">
+              Online & mobile surveys · Product tests · Tracking studies
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        class="philosophy-banner"
+        id="philosophy"
+        aria-labelledby="philosophy-title"
+      >
+        <img
+          src="/assets/cultural-conversation.webp"
+          width="1672"
+          height="941"
+          alt="Illustrative conversation between people of different cultural backgrounds"
+          loading="lazy"
+        />
+        <div class="container">
+          <div class="philosophy-copy">
+            <p class="eyebrow">Our philosophy. Our reason for being.</p>
+            <h2 id="philosophy-title">Transcultural<br />Intelligence</h2>
+            <p>
+              Data can tell us what people say and do. Cultural understanding
+              helps us interpret what it means.
+            </p>
+            <p>
+              Language, values, social expectations and everyday experience
+              shape how people understand brands and respond to communications.
+              The same message can carry different meanings across markets.
+            </p>
+            <p>
+              We bring research evidence and cultural context together,
+              translating local understanding into insight that organisations
+              can use. This is the thinking behind WisdomAsia, and the meaning
+              of our longstanding tagline.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section approach-section"
+        id="approach"
+        aria-labelledby="approach-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">03 / Our approach</p>
+              <h2 id="approach-title">
+                Beyond the data.<br />Towards understanding.
+              </h2>
+            </div>
+            <p>
+              Sound research starts with a clear question and ends with insight
+              that can be used.
+            </p>
+          </div>
+          <ol class="approach-steps">
+            <li>
+              <span class="step-number">01</span>
+              <h3>Clarify the question</h3>
+              <p>
+                Establish the business decision, what is already known and where
+                research can add value.
+              </p>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <h3>Design the research</h3>
+              <p>
+                Select methods suited to the question, the audience and the
+                practical needs of the assignment.
+              </p>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <h3>Understand the context</h3>
+              <p>
+                Consider local language, cultural expectations and the realities
+                of the market.
+              </p>
+            </li>
+            <li>
+              <span class="step-number">04</span>
+              <h3>Make insight useful</h3>
+              <p>
+                Bring findings together with thoughtful interpretation and clear
+                implications for the decision.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="founder-section" aria-labelledby="founder-title">
+        <div class="container founder-grid">
+          <div class="founder-heading">
+            <p class="eyebrow">The experience behind the perspective</p>
+            <h2 id="founder-title">Dr Barry Tse</h2>
+            <p class="founder-role">Founder, WisdomAsia</p>
+            <a class="founder-jump" href="#approach"
+              >How this shapes our work <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="founder-copy">
+            <p class="founder-lead">
+              Three decades in research.<br />A career across cultures.
+            </p>
+            <p>
+              Barry founded WisdomAsia in 2004, following research roles at
+              Nielsen and Synovate and client-side experience with Nokia. His
+              work spans Hong Kong, Singapore and mainland China, with
+              particular depth in qualitative research, consumer understanding,
+              and brand and communications research.
+            </p>
+            <p>
+              He holds a PhD in Psychology and lectures in psychology. This
+              combination of commercial experience, cultural understanding and
+              psychological knowledge informs WisdomAsia’s approach to
+              interpreting what people say, how they respond and what their
+              choices mean.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section network-section container"
+        id="network"
+        aria-labelledby="network-title"
+      >
+        <div class="section-grid">
+          <div>
+            <p class="eyebrow">04 / Our network</p>
+            <h2 id="network-title">
+              China expertise.<br />International connections.
+            </h2>
+            <p class="network-intro">
+              Experienced collaborators.<br />Trusted research relationships.
+            </p>
+          </div>
+          <div class="section-copy">
+            <p class="lead">
+              We work with experienced research collaborators, bringing together
+              the expertise and local understanding appropriate to each
+              assignment.
+            </p>
+            <p>
+              Established international professional relationships complement
+              our China experience and support collaboration when a project
+              requires a broader market perspective.
+            </p>
+            <div class="win-affiliation">
+              <img
+                src="/assets/win_logo_transparent.png"
+                width="234"
+                height="77"
+                loading="lazy"
+                alt="WIN"
+              />
+              <div>
+                <h3>China member of WIN</h3>
+                <p>
+                  Worldwide Independent Network of Market Research and Opinion
+                  Poll
+                </p>
+                <p>
+                  A global network of independent research companies. Member
+                  companies are independent organisations, connected through
+                  professional collaboration.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://winmr.com/members/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Explore the WIN network <span aria-hidden="true">↗</span
+                  ><span class="sr-only"> (opens in a new tab)</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow">05 / Contact</p>
+            <h2 id="contact-title">A question about<br />your market?</h2>
+            <p>
+              For research enquiries and professional collaborations,<br
+                class="desktop-break"
+              />
+              get in touch with WisdomAsia.
+            </p>
+          </div>
+          <div class="contact-details">
+            <span class="contact-label">Research enquiries</span
+            ><a class="email-link" href="mailto:enquiry@wisdomasia-mr.com"
+              >enquiry@wisdomasia-mr.com <span aria-hidden="true">↗</span></a
+            >
+            <address class="office-address">
+              <span class="contact-label">Shanghai office</span>Room 703, Golden
+              Magnolia Plaza<br />No. 1 Dapu Road, Huangpu District<br />Shanghai
+              200023, P.R. China
+            </address>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/company/wisdomasia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WisdomAsia on LinkedIn <span aria-hidden="true">↗</span
+              ><span class="sr-only"> (opens in a new tab)</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer container">
+      <div>
+        <strong>WisdomAsia</strong><span>Transcultural Intelligence</span>
+      </div>
+      <p>© <span id="year">2026</span> WisdomAsia. Established 2004.</p>
+      <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
-
-    <!-- Main Logic Script Module -->
     <script type="module" src="./script.js"></script>
   </body>
 </html>
