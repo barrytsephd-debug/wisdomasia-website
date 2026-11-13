@@ -440,12 +440,15 @@ button:focus-visible {
 .founder-heading {
   border-left: 3px solid var(--orange);
   padding-left: 28px;
+  align-self: start;
 }
 .founder-heading .eyebrow {
   color: #f7b18d;
 }
 .founder-heading h2 {
-  font-size: 46px;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
 }
 .founder-role {
   color: #dbd2c4;
@@ -469,7 +472,7 @@ button:focus-visible {
 }
 .founder-copy .founder-lead {
   color: #fff8ee;
-  font-size: 25px;
+  font-size: 21px;
   line-height: 1.35;
   letter-spacing: -0.5px;
 }
@@ -893,13 +896,13 @@ button:focus-visible {
     padding-left: 22px;
   }
   .founder-heading h2 {
-    font-size: 38px;
+    font-size: 26px;
   }
   .founder-jump {
     margin-top: 22px;
   }
   .founder-copy .founder-lead {
-    font-size: 24px;
+    font-size: 20px;
   }
   .network-intro {
     margin-top: 24px;
