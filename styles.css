@@ -72,6 +72,7 @@ button:focus-visible {
 }
 .container {
   width: min(1240px, calc(100% - 112px));
+  max-width: none; /* neutralise Tailwind's .container breakpoint caps */
   margin-inline: auto;
 }
 .site-header {
@@ -836,6 +837,7 @@ button:focus-visible {
     font-size: 28px;
   }
   .expertise-grid {
+    grid-template-columns: 1fr;
     column-gap: 26px;
   }
   .expertise-item {
@@ -980,26 +982,9 @@ button:focus-visible {
   }
 }
 
-/* Brand-colour accents are CSS, with no artwork borrowed from the deck. */
 .about-section,
 .contact-section {
   position: relative;
-}
-.about-section::before,
-.contact-section::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 140px;
-  height: 10px;
-  background: linear-gradient(
-    110deg,
-    #e6691e 0%,
-    #d83b1e 45%,
-    #bb2027 45%,
-    #951b24 100%
-  );
 }
 .hero-tagline {
   font-size: 19px;
@@ -1037,11 +1022,15 @@ button:focus-visible {
 }
 @media (max-width: 760px) {
   .hero h1 {
-    font-size: clamp(43px, 9.2vw, 67px);
+    /* tops out at the desktop floor (48px) so size never jumps at 761px */
+    font-size: clamp(43px, 6.3vw, 48px);
   }
   .hero-tagline {
     font-size: 16px;
   }
+}
+/* Philosophy banner stays stacked until the copy column can hold a readable measure. */
+@media (max-width: 899px) {
   .philosophy-banner {
     display: flex;
     flex-direction: column;
@@ -1066,4 +1055,4 @@ button:focus-visible {
   }
 }
 
-@media(min-width:761px){.philosophy-banner > img{width:50%;object-position:30% center}.philosophy-copy{width:46%;padding:30px}}
+@media(min-width:900px){.philosophy-banner > img{width:50%;object-position:30% center}.philosophy-copy{width:46%;padding:30px}}
