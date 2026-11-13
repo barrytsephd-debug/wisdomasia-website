@@ -422,22 +422,40 @@
       </section>
       <!--
         Latest insight card. To update when a new LinkedIn article is published,
-        change the date (datetime and visible text), title, summary and href.
+        change the date (datetime and visible text), title, summary and both hrefs.
+        Cover image is optional: replace the file in public/assets (1200x675 WebP),
+        or delete the <a class="insight-media"> block and the "has-image" class
+        for a text-only card.
       -->
       <section
         class="insight-section"
         id="insight"
         aria-labelledby="insight-title"
       >
-        <div class="container insight-inner">
-          <div>
+        <div class="container insight-inner has-image">
+          <a
+            class="insight-media"
+            href="https://www.linkedin.com/pulse/use-first-trust-why-ai-m%C3%B6bius-loop-wisdomasia-tshac/"
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+            <img
+              src="/assets/insight-ai-trust-mobius.webp"
+              width="1200"
+              height="675"
+              loading="lazy"
+              decoding="async"
+              alt=""
+            />
+          </a>
+          <div class="insight-body">
             <p class="eyebrow">Latest insight</p>
             <p class="insight-meta">
               <time datetime="2026-11-09">9 November 2026</time> · LinkedIn
               article
             </p>
-          </div>
-          <div>
             <h2 id="insight-title" class="insight-title">
               Use first or trust first? Why AI trust is a Möbius loop
             </h2>
