@@ -1109,6 +1109,46 @@ button:focus-visible {
   max-width: 62ch;
   color: var(--muted);
 }
+.insight-prev-wrap {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.insight-prev-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.insight-prev {
+  display: grid;
+  grid-template-columns: 112px 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+.insight-prev img {
+  width: 112px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.insight-prev-text {
+  display: grid;
+  gap: 4px;
+}
+.insight-prev-title {
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.insight-prev-arrow {
+  font-size: 12px;
+  color: var(--red);
+}
+.insight-prev:hover .insight-prev-title {
+  color: var(--red);
+}
 @media (max-width: 1050px) {
   .insight-inner.has-image {
     gap: 36px;
