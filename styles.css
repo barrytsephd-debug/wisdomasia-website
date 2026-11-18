@@ -1133,6 +1133,9 @@ button:focus-visible {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+.insight-prev + .insight-prev {
+  margin-top: 14px;
+}
 .insight-prev-text {
   display: grid;
   gap: 4px;

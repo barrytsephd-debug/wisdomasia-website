@@ -335,7 +335,8 @@
         Latest insight card: one featured article plus the previous one.
         When a new LinkedIn article is published:
         1. Move the current featured article's date, title, href and image path
-           into the "Previously" link (insight-prev).
+           into a new "Previously" link (insight-prev) at the top of the list,
+           and remove the oldest one if the list is getting long.
         2. Put the new article's date (datetime and visible text), title,
            summary and both hrefs into the featured card.
         3. Add the new cover to public/assets (1200x675 WebP) and delete the
@@ -413,6 +414,31 @@
                   <span class="insight-prev-title"
                     >Use first or trust first? Why AI trust is a Möbius
                     loop</span
+                  >
+                </span>
+                <span class="insight-prev-arrow" aria-hidden="true">↗</span>
+                <span class="sr-only"> (opens in a new tab)</span>
+              </a>
+              <a
+                class="insight-prev"
+                href="https://www.linkedin.com/pulse/chinas-generational-paradox-wisdomasia-dd2fc/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/insight-generational-paradox.webp"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+                <span class="insight-prev-text">
+                  <span class="insight-meta"
+                    ><time datetime="2026-08-30">30 August 2026</time></span
+                  >
+                  <span class="insight-prev-title"
+                    >China's Generational Paradox</span
                   >
                 </span>
                 <span class="insight-prev-arrow" aria-hidden="true">↗</span>
