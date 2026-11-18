@@ -332,11 +332,16 @@
         </div>
       </section>
       <!--
-        Latest insight card. To update when a new LinkedIn article is published,
-        change the date (datetime and visible text), title, summary and both hrefs.
-        Cover image is optional: replace the file in public/assets (1200x675 WebP),
-        or delete the <a class="insight-media"> block and the "has-image" class
-        for a text-only card.
+        Latest insight card: one featured article plus the previous one.
+        When a new LinkedIn article is published:
+        1. Move the current featured article's date, title, href and image path
+           into the "Previously" link (insight-prev).
+        2. Put the new article's date (datetime and visible text), title,
+           summary and both hrefs into the featured card.
+        3. Add the new cover to public/assets (1200x675 WebP) and delete the
+           image of the article that dropped off.
+        Cover images are optional: remove the <a class="insight-media"> block
+        and the "has-image" class for a text-only featured card.
       -->
       <section
         class="insight-section"
@@ -346,14 +351,14 @@
         <div class="container insight-inner has-image">
           <a
             class="insight-media"
-            href="https://www.linkedin.com/pulse/use-first-trust-why-ai-m%C3%B6bius-loop-wisdomasia-tshac/"
+            href="https://www.linkedin.com/pulse/chinese-stress-paradox-less-worry-money-more-pressure-perform-navwc/"
             target="_blank"
             rel="noopener noreferrer"
             tabindex="-1"
             aria-hidden="true"
           >
             <img
-              src="/assets/insight-ai-trust-mobius.webp"
+              src="/assets/insight-chinese-stress-paradox.webp"
               width="1200"
               height="675"
               loading="lazy"
@@ -364,26 +369,56 @@
           <div class="insight-body">
             <p class="eyebrow">Latest insight</p>
             <p class="insight-meta">
-              <time datetime="2026-11-09">9 November 2026</time> · LinkedIn
+              <time datetime="2026-11-18">18 November 2026</time> · LinkedIn
               article
             </p>
             <h2 id="insight-title" class="insight-title">
-              Use first or trust first? Why AI trust is a Möbius loop
+              The Chinese Stress Paradox: Less Worry About Money, More Pressure to Perform
             </h2>
             <p class="insight-summary">
-              WIN Worldview Survey data from 45 markets show AI use and trust
-              rising together, yet China trusts AI more than its use predicts
-              and the Nordic countries trust it less. We look at what might
-              explain the gap, and whether that trust is deserved.
+              WIN WorldViews Survey 2026 data show urban Chinese report
+              frequent stress at less than half the global rate, and rank
+              money far lower: work, family and, later in life, health carry
+              the load. Higher earners and parents of school-age children feel
+              it most, and anxiety concentrates among the least mindful.
             </p>
             <a
               class="text-link"
-              href="https://www.linkedin.com/pulse/use-first-trust-why-ai-m%C3%B6bius-loop-wisdomasia-tshac/"
+              href="https://www.linkedin.com/pulse/chinese-stress-paradox-less-worry-money-more-pressure-perform-navwc/"
               target="_blank"
               rel="noopener noreferrer"
               >Read on LinkedIn <span aria-hidden="true">↗</span
               ><span class="sr-only"> (opens in a new tab)</span></a
             >
+            <div class="insight-prev-wrap">
+              <p class="insight-prev-label">Previously</p>
+              <a
+                class="insight-prev"
+                href="https://www.linkedin.com/pulse/use-first-trust-why-ai-m%C3%B6bius-loop-wisdomasia-tshac/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/assets/insight-ai-trust-mobius.webp"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+                <span class="insight-prev-text">
+                  <span class="insight-meta"
+                    ><time datetime="2026-11-09">9 November 2026</time></span
+                  >
+                  <span class="insight-prev-title"
+                    >Use first or trust first? Why AI trust is a Möbius
+                    loop</span
+                  >
+                </span>
+                <span class="insight-prev-arrow" aria-hidden="true">↗</span>
+                <span class="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
