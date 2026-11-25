@@ -1360,3 +1360,102 @@ button:focus-visible {
     align-items: flex-start;
   }
 }
+
+/* Selected work: anonymised case studies. */
+.work-section {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding-block: 88px;
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+.case-card {
+  border-top: 3px solid var(--orange);
+  background: var(--paper);
+  padding: 26px 26px 22px;
+}
+.case-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.case-card h3 {
+  margin-top: 12px;
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+}
+.case-teaser {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.case-details {
+  margin-top: 18px;
+}
+.case-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #b3aea1;
+  padding-bottom: 4px;
+}
+.case-details summary::-webkit-details-marker {
+  display: none;
+}
+.case-details summary::after {
+  content: "+";
+  color: var(--red);
+  font-size: 16px;
+  line-height: 1;
+}
+.case-details[open] summary::after {
+  content: "−";
+}
+.case-details summary:hover {
+  color: var(--red);
+}
+.case-body {
+  margin-top: 18px;
+}
+.case-body h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: 16px;
+}
+.case-body h4:first-child {
+  margin-top: 0;
+}
+.case-body p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+@media (max-width: 1050px) {
+  .case-grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+}
+@media (max-width: 760px) {
+  .work-section {
+    padding-block: 64px;
+  }
+  .case-card {
+    padding: 22px 20px 18px;
+  }
+}
