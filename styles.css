@@ -1459,3 +1459,69 @@ button:focus-visible {
     padding: 22px 20px 18px;
   }
 }
+
+/* Approach: compact two-column layout. */
+.approach-section {
+  padding-block: 72px;
+}
+.approach-section > .container {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 72px;
+  align-items: start;
+}
+.approach-section .section-heading {
+  display: block;
+  margin-bottom: 0;
+}
+.approach-section .section-heading > p {
+  margin-top: 22px;
+}
+.approach-section .approach-steps {
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 36px;
+}
+.approach-section .approach-steps li {
+  padding-top: 14px;
+}
+.approach-section .approach-steps h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.approach-section .approach-steps p {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .approach-section > .container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 760px) {
+  .approach-section {
+    padding-block: 56px;
+  }
+  .approach-section .approach-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .approach-section .approach-steps li {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    column-gap: 8px;
+    padding: 14px 0 16px;
+    border-top-width: 1px;
+  }
+  .approach-section .step-number {
+    grid-row: span 2;
+    padding-top: 3px;
+  }
+  .approach-section .approach-steps h3 {
+    margin-top: 0;
+    font-size: 17px;
+  }
+  .approach-section .approach-steps p {
+    margin-top: 4px;
+  }
+}
