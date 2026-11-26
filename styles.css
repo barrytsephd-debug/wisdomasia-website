@@ -1544,8 +1544,17 @@ button:focus-visible {
 .greeting.is-open {
   opacity: 1;
 }
+.greeting-fx {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
 .greeting-card {
   position: relative;
+  z-index: 1;
   width: min(880px, 100%);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   transform: translateY(8px) scale(0.98);
