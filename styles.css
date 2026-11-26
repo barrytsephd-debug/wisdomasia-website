@@ -1525,3 +1525,97 @@ button:focus-visible {
     margin-top: 4px;
   }
 }
+
+/* Seasonal greeting overlay. */
+.greeting {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(14, 18, 30, 0.6);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.greeting[hidden] {
+  display: none;
+}
+.greeting.is-open {
+  opacity: 1;
+}
+.greeting-card {
+  position: relative;
+  width: min(880px, 100%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  transform: translateY(8px) scale(0.98);
+  transition: transform 0.25s ease;
+}
+.greeting.is-open .greeting-card {
+  transform: none;
+}
+.greeting-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.greeting-controls {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.greeting-countdown {
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+.greeting-close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.greeting-close:hover {
+  background: #ffe9dc;
+}
+.greeting-close:focus-visible {
+  outline: 3px solid #ffc7a6;
+  outline-offset: 2px;
+}
+@media (max-width: 760px) {
+  .greeting {
+    padding: 14px;
+  }
+  .greeting-controls {
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+  .greeting-countdown {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+  .greeting-close {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .greeting,
+  .greeting-card {
+    transition: none;
+  }
+}
