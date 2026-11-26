@@ -59,7 +59,7 @@ document.querySelector("#year").textContent = new Date().getFullYear();
       until: "2027-01-03T00:00:00+08:00",
       image: "/assets/greeting-christmas-2026.webp",
       label:
-        "Season's Greetings from China. May this festive season bring joy and peace, and may the year ahead open new horizons of opportunity and discovery. Merry Christmas and Happy New Year 2027. The WisdomAsia Team, Transcultural Intelligence.",
+        "WisdomAsia, Transcultural Intelligence. Season's Greetings from China. Merry Christmas and Happy New Year 2027. May this festive season bring joy and peace, and may the year ahead open new horizons of opportunity and discovery. The WisdomAsia Team.",
     },
     {
       id: "cny",
@@ -195,9 +195,12 @@ document.querySelector("#year").textContent = new Date().getFullYear();
         ctx.restore();
       } else {
         ctx.fillStyle = "#ffffff";
+        ctx.shadowColor = "rgba(70, 80, 110, 0.55)";
+        ctx.shadowBlur = 3;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
+        ctx.shadowBlur = 0;
       }
     };
     const frame = (t) => {
