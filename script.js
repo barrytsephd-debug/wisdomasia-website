@@ -57,7 +57,7 @@ document.querySelector("#year").textContent = new Date().getFullYear();
       id: "christmas",
       effect: "snow",
       until: "2027-01-03T00:00:00+08:00",
-      image: "/assets/greeting-christmas-2026.webp",
+      image: "/assets/greeting-christmas-2026-v3.webp",
       label:
         "WisdomAsia, Transcultural Intelligence. Season's Greetings from China. Merry Christmas and Happy New Year 2027. May this festive season bring joy and peace, and may the year ahead open new horizons of opportunity and discovery. The WisdomAsia Team.",
     },
@@ -65,7 +65,7 @@ document.querySelector("#year").textContent = new Date().getFullYear();
       id: "cny",
       effect: "petals",
       until: "2027-02-21T00:00:00+08:00",
-      image: "/assets/greeting-cny-2027.webp",
+      image: "/assets/greeting-cny-2027-v2.webp",
       label:
         "三陽開泰 萬象更新. Renewed Harmony, New Possibilities. Happy Chinese New Year 2027, the Year of the Goat. The WisdomAsia Team, Transcultural Intelligence.",
     },
